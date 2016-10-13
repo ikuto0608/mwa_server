@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyString
+  questionArray: MyText
+  indexArrayOfAnswer: MyText
+  userId: 1
+  examId: 1
+
+two:
+  question: MyString
+  questionArray: MyText
+  indexArrayOfAnswer: MyText
+  userId: 1
+  examId: 1
