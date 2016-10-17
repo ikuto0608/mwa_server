@@ -42,7 +42,7 @@ class ExamsController < ApplicationController
 
     topics.sample(10).each do |topic|
       answer_array_list.delete(topic.answer_array)
-      question_array << { id: topic.id, answers: [topic.answer_array].concat(answer_array_list.sample(3)), sentence: topic.make_question }
+      question_array << { id: topic.id, answers: [topic.answer_array].concat(answer_array_list.sample(3)).shuffle, sentence: topic.make_question }
       answer_array_list << topic.answer_array
     end
 
