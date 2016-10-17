@@ -11,22 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011172721) do
+ActiveRecord::Schema.define(version: 20161017004732) do
 
   create_table "exams", force: true do |t|
     t.string   "name"
-    t.integer  "userId"
-    t.integer  "categoryId"
+    t.integer  "user_id"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "result_array"
   end
 
   create_table "topics", force: true do |t|
     t.string   "question"
-    t.text     "questionArray"
-    t.text     "indexArrayOfAnswer"
-    t.integer  "userId"
-    t.integer  "examId"
+    t.text     "question_array"
+    t.text     "index_array_of_answer"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "exam_id"
