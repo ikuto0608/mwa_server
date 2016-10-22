@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: exams
+#
+#  id            :integer          not null, primary key
+#  name          :string(255)
+#  user_id       :integer
+#  category_id   :integer
+#  created_at    :datetime
+#  updated_at    :datetime
+#  result_array  :text
+#  result_time   :integer
+#  volatile_json :text
+#
+
 class ExamsController < ApplicationController
   def index
     @exams = Exam.all()
@@ -57,14 +72,19 @@ class ExamsController < ApplicationController
     @exam = Exam.new(exam_params)
     @exam.mark
 
+    topics = []
+    @exam.marked_topics.each do |topic|
+      topics << {question: topic.question, questionArray: topic.question_array, indexArrayOfAnswer: topic.index_array_of_answer, userId: topic.user_id, examId: topic.exam_id, volatileJson: topic.volatile_json }
+    end
+    
     respond_to do |format|
       format.json do
-        render json: { id: @exam.id, name: @exam.name, result_array: @exam.result_array }.to_json
+        render json: { id: @exam.id, name: @exam.name, markedTopics: topics }.to_json
       end
     end
   end
 
   def exam_params
-    params.require(:exam).permit(:id, :name, topics_attributes: [ :question, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
+    params.require(:exam).permit(:id, :name, :result_time, topics_attributes: [ :question, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
   end
 end
