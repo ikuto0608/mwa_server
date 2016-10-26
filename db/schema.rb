@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021194012) do
+ActiveRecord::Schema.define(version: 20161024025937) do
 
   create_table "exams", force: true do |t|
     t.string   "name"
@@ -33,8 +33,17 @@ ActiveRecord::Schema.define(version: 20161021194012) do
     t.datetime "updated_at"
     t.integer  "exam_id"
     t.text     "volatile_json"
+    t.text     "description"
   end
 
   add_index "topics", ["exam_id"], name: "index_topics_on_exam_id"
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "name"
+    t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

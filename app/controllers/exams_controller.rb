@@ -57,7 +57,7 @@ class ExamsController < ApplicationController
 
     topics.sample(10).each do |topic|
       answer_array_list.delete(topic.answer_array)
-      question_array << { id: topic.id, answers: [topic.answer_array].concat(answer_array_list.sample(3)).shuffle, sentence: topic.make_question }
+      question_array << { id: topic.id, answers: [topic.answer_array].concat(answer_array_list.sample(3)).shuffle, sentence: topic.make_question, description: topic.description }
       answer_array_list << topic.answer_array
     end
 
@@ -74,9 +74,9 @@ class ExamsController < ApplicationController
 
     topics = []
     @exam.marked_topics.each do |topic|
-      topics << {question: topic.question, questionArray: topic.question_array, indexArrayOfAnswer: topic.index_array_of_answer, userId: topic.user_id, examId: topic.exam_id, volatileJson: topic.volatile_json }
+      topics << {question: topic.question, description: topic.description, questionArray: topic.question_array, indexArrayOfAnswer: topic.index_array_of_answer, userId: topic.user_id, examId: topic.exam_id, volatileJson: topic.volatile_json }
     end
-    
+
     respond_to do |format|
       format.json do
         render json: { id: @exam.id, name: @exam.name, markedTopics: topics }.to_json
@@ -84,7 +84,8 @@ class ExamsController < ApplicationController
     end
   end
 
-  def exam_params
-    params.require(:exam).permit(:id, :name, :result_time, topics_attributes: [ :question, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
-  end
+  private
+    def exam_params
+      params.require(:exam).permit(:id, :name, :result_time, topics_attributes: [ :question, :description, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
+    end
 end

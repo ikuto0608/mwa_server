@@ -11,6 +11,7 @@
 #  updated_at            :datetime
 #  exam_id               :integer
 #  volatile_json         :text
+#  description           :text
 #
 
 class Topic < ActiveRecord::Base
