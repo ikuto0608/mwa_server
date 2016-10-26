@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :exams
   get 'exams/take/:id' => 'exams#take'
   post 'exams/result' => 'exams#result'
+  post 'exams/:id/update' => 'exams#update'
 
   post 'login' => 'users#login'
 

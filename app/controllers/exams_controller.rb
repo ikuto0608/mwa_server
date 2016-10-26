@@ -47,6 +47,19 @@ class ExamsController < ApplicationController
     end
   end
 
+  def update
+    @exam = Exam.where(id: params[:id]).first
+    if @exam.update_attributes(exam_params)
+      respond_to do |format|
+        format.json { render :json => {:message => "Success"} }
+      end
+    else
+      respond_to do |format|
+        format.json { render :json => {:message => "Error"} }
+      end
+    end
+  end
+
   def take
     id = params[:id]
     @exam = Exam.where(id: id).first
