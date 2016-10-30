@@ -43,3 +43,8 @@ gem 'pry-rails', group: [:development, :test]
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'annotate', github: 'ctran/annotate_models'
+
+gem 'devise'
+gem 'jwt'
+
+gem 'yaml_db'

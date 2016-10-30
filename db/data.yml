@@ -1,0 +1,4966 @@
+
+---
+exams:
+  columns:
+  - id
+  - name
+  - user_id
+  - category_id
+  - created_at
+  - updated_at
+  - result_array
+  - result_time
+  - volatile_json
+  records: 
+  - - 3
+    - Test1Test
+    - 
+    - 
+    - '2016-10-15 19:25:07.408285'
+    - '2016-10-26 23:57:45.428423'
+    - 
+    - 
+    - 'null'
+  - - 4
+    - Test2
+    - 
+    - 
+    - '2016-10-16 20:30:20.028431'
+    - '2016-10-16 20:30:20.028431'
+    - 
+    - 
+    - 
+  - - 5
+    - Test3
+    - 
+    - 
+    - '2016-10-16 20:31:31.140306'
+    - '2016-10-16 20:31:31.140306'
+    - 
+    - 
+    - 
+  - - 6
+    - Test4
+    - 
+    - 
+    - '2016-10-16 20:31:40.141485'
+    - '2016-10-16 20:31:40.141485'
+    - 
+    - 
+    - 
+  - - 7
+    - Test5
+    - 
+    - 
+    - '2016-10-16 20:31:58.070196'
+    - '2016-10-16 20:31:58.070196'
+    - 
+    - 
+    - 
+  - - 10
+    - DUO1
+    - 
+    - 
+    - '2016-10-24 03:16:50.564268'
+    - '2016-10-24 03:16:50.564268'
+    - 
+    - 
+    - 'null'
+  - - 11
+    - DUO1-2
+    - 
+    - 
+    - '2016-10-24 03:43:58.199211'
+    - '2016-10-24 03:43:58.199211'
+    - 
+    - 
+    - 'null'
+  - - 12
+    - DUO3
+    - 
+    - 
+    - '2016-10-24 04:48:40.384511'
+    - '2016-10-24 04:48:40.384511'
+    - 
+    - 
+    - 'null'
+  - - 13
+    - Motoki
+    - 
+    - 
+    - '2016-10-24 17:07:56.165158'
+    - '2016-10-24 17:07:56.165158'
+    - 
+    - 
+    - 'null'
+
+---
+topics:
+  columns:
+  - id
+  - question
+  - question_array
+  - index_array_of_answer
+  - user_id
+  - created_at
+  - updated_at
+  - exam_id
+  - volatile_json
+  - description
+  records: 
+  - - 7
+    - Brian asked Judy out to dinner and a movie.
+    - |
+      ---
+      - Brian
+      - asked
+      - Judy
+      - out
+      - to
+      - dinner
+      - and
+      - a
+      - movie.
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-15 19:25:07.410827'
+    - '2016-10-15 19:25:07.410827'
+    - 3
+    - 
+    - 
+  - - 8
+    - I asked around but nobody has seen my wallet.
+    - |
+      ---
+      - I
+      - asked
+      - around
+      - but
+      - nobody
+      - has
+      - seen
+      - my
+      - wallet.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-15 19:25:07.415279'
+    - '2016-10-15 19:25:07.415279'
+    - 3
+    - 
+    - 
+  - - 9
+    - You'll have to back up your car so that I can get out.
+    - |
+      ---
+      - You'll
+      - have
+      - to
+      - back
+      - up
+      - your
+      - car
+      - so
+      - that
+      - I
+      - can
+      - get
+      - out.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-15 19:25:07.418148'
+    - '2016-10-15 19:25:07.418148'
+    - 3
+    - 
+    - 
+  - - 10
+    - My wife backed me up over my decision to quit my job.
+    - |
+      ---
+      - My
+      - wife
+      - backed
+      - me
+      - up
+      - over
+      - my
+      - decision
+      - to
+      - quit
+      - my
+      - job.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-15 19:25:07.420572'
+    - '2016-10-15 19:25:07.420572'
+    - 3
+    - 
+    - 
+  - - 11
+    - The racing car blew up after it crashed into the fence.
+    - |
+      ---
+      - The
+      - racing
+      - car
+      - blew
+      - up
+      - after
+      - it
+      - crashed
+      - into
+      - the
+      - fence.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-15 19:25:07.422945'
+    - '2016-10-15 19:25:07.422945'
+    - 3
+    - 
+    - 
+  - - 12
+    - Our car broke down at the side of the highway in the snowstom.
+    - |
+      ---
+      - Our
+      - car
+      - broke
+      - down
+      - at
+      - the
+      - side
+      - of
+      - the
+      - highway
+      - in
+      - the
+      - snowstom.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-15 19:25:07.425336'
+    - '2016-10-15 19:25:07.425336'
+    - 3
+    - 
+    - 
+  - - 13
+    - Somebody broke in last night and stole our stereo.
+    - |
+      ---
+      - Somebody
+      - broke
+      - in
+      - last
+      - night
+      - and
+      - stole
+      - our
+      - stereo.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-15 19:25:07.427645'
+    - '2016-10-15 19:25:07.427645'
+    - 3
+    - 
+    - 
+  - - 14
+    - The fireman had to break into the room to rescue the children.
+    - |
+      ---
+      - The
+      - fireman
+      - had
+      - to
+      - break
+      - into
+      - the
+      - room
+      - to
+      - rescue
+      - the
+      - children.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-15 19:25:07.430392'
+    - '2016-10-15 19:25:07.430392'
+    - 3
+    - 
+    - 
+  - - 15
+    - My boyfriend and I broke up before I moved to America.
+    - |
+      ---
+      - My
+      - boyfriend
+      - and
+      - I
+      - broke
+      - up
+      - before
+      - I
+      - moved
+      - to
+      - America.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-15 19:25:07.432930'
+    - '2016-10-15 19:25:07.432930'
+    - 3
+    - 
+    - 
+  - - 16
+    - The prisoners broke up of jail when the guards weren't looking.
+    - |
+      ---
+      - The
+      - prisoners
+      - broke
+      - up
+      - of
+      - jail
+      - when
+      - the
+      - guards
+      - weren't
+      - looking.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-15 19:25:07.435740'
+    - '2016-10-15 19:25:07.435740'
+    - 3
+    - 
+    - 
+  - - 17
+    - My grandparents brought me up after my parents died.
+    - |
+      ---
+      - My
+      - grandparents
+      - brought
+      - me
+      - up
+      - after
+      - my
+      - parents
+      - died.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-15 19:25:07.438316'
+    - '2016-10-15 19:25:07.438316'
+    - 3
+    - 
+    - 
+  - - 18
+    - We called around but we weren't able to find the car part we needed.
+    - |
+      ---
+      - We
+      - called
+      - around
+      - but
+      - we
+      - weren't
+      - able
+      - to
+      - find
+      - the
+      - car
+      - part
+      - we
+      - needed.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-15 19:25:07.441010'
+    - '2016-10-15 19:25:07.441010'
+    - 3
+    - 
+    - 
+  - - 19
+    - I called the company back but the offices were closed for the weekend.
+    - |
+      ---
+      - I
+      - called
+      - the
+      - company
+      - back
+      - but
+      - the
+      - offices
+      - were
+      - closed
+      - for
+      - the
+      - weekend.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-15 19:25:07.443304'
+    - '2016-10-15 19:25:07.443304'
+    - 3
+    - 
+    - 
+  - - 20
+    - Jason called the wedding off because he wasn't in love with his fiance.
+    - |
+      ---
+      - Jason
+      - called
+      - the
+      - wedding
+      - 'off'
+      - because
+      - he
+      - wasn't
+      - in
+      - love
+      - with
+      - his
+      - fiance.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-15 19:25:07.446237'
+    - '2016-10-15 19:25:07.446237'
+    - 3
+    - 
+    - 
+  - - 21
+    - The professor called on me for question 1.
+    - |
+      ---
+      - The
+      - professor
+      - called
+      - 'on'
+      - me
+      - for
+      - question
+      - '1.'
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-15 19:25:07.448861'
+    - '2016-10-15 19:25:07.448861'
+    - 3
+    - 
+    - 
+  - - 22
+    - My car engine is about to wear out.
+    - |
+      ---
+      - My
+      - car
+      - engine
+      - is
+      - about
+      - to
+      - wear
+      - out.
+    - |
+      ---
+      - 6
+      - 7
+    - 
+    - '2016-10-16 20:30:20.033332'
+    - '2016-10-16 20:30:20.033332'
+    - 4
+    - 
+    - 
+  - - 23
+    - They say a storm is coming, so watch out and don't take any chances.
+    - |
+      ---
+      - They
+      - say
+      - a
+      - storm
+      - is
+      - coming,
+      - so
+      - watch
+      - out
+      - and
+      - don't
+      - take
+      - any
+      - chances.
+    - |
+      ---
+      - 7
+      - 8
+    - 
+    - '2016-10-16 20:30:20.041509'
+    - '2016-10-16 20:30:20.041509'
+    - 4
+    - 
+    - 
+  - - 24
+    - We have to wake up early for work on Monday.
+    - |
+      ---
+      - We
+      - have
+      - to
+      - wake
+      - up
+      - early
+      - for
+      - work
+      - 'on'
+      - Monday.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-16 20:30:20.044296'
+    - '2016-10-16 20:30:20.044296'
+    - 4
+    - 
+    - 
+  - - 25
+    - Your mother wants you to turn the TV off and come for dinner.
+    - |
+      ---
+      - Your
+      - mother
+      - wants
+      - you
+      - to
+      - turn
+      - the
+      - TV
+      - 'off'
+      - and
+      - come
+      - for
+      - dinner.
+    - |
+      ---
+      - 5
+      - 8
+    - 
+    - '2016-10-16 20:30:20.047022'
+    - '2016-10-16 20:30:20.047022'
+    - 4
+    - 
+    - 
+  - - 26
+    - I turned the job down because I don't want to move.
+    - |
+      ---
+      - I
+      - turned
+      - the
+      - job
+      - down
+      - because
+      - I
+      - don't
+      - want
+      - to
+      - move.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-16 20:30:20.051052'
+    - '2016-10-16 20:30:20.051052'
+    - 4
+    - 
+    - 
+  - - 27
+    - I'm going to try these jeans on, but I don't think they will fit.
+    - |
+      ---
+      - I'm
+      - going
+      - to
+      - try
+      - these
+      - jeans
+      - on,
+      - but
+      - I
+      - don't
+      - think
+      - they
+      - will
+      - fit.
+    - |
+      ---
+      - 3
+      - 6
+    - 
+    - '2016-10-16 20:30:20.052869'
+    - '2016-10-16 20:30:20.052869'
+    - 4
+    - 
+    - 
+  - - 28
+    - We threw our old furniture away when we won the lottery.
+    - |
+      ---
+      - We
+      - threw
+      - our
+      - old
+      - furniture
+      - away
+      - when
+      - we
+      - won
+      - the
+      - lottery.
+    - |
+      ---
+      - 1
+      - 5
+    - 
+    - '2016-10-16 20:30:20.055256'
+    - '2016-10-16 20:30:20.055256'
+    - 4
+    - 
+    - 
+  - - 29
+    - She must have eaten something that didn't agree with her because she threw up
+      right after dinner.
+    - |
+      ---
+      - She
+      - must
+      - have
+      - eaten
+      - something
+      - that
+      - didn't
+      - agree
+      - with
+      - her
+      - because
+      - she
+      - threw
+      - up
+      - right
+      - after
+      - dinner.
+    - |
+      ---
+      - 12
+      - 13
+    - 
+    - '2016-10-16 20:30:20.061456'
+    - '2016-10-16 20:30:20.061456'
+    - 4
+    - 
+    - 
+  - - 30
+    - I have to take our new TV back because it doesn't work.
+    - |
+      ---
+      - I
+      - have
+      - to
+      - take
+      - our
+      - new
+      - TV
+      - back
+      - because
+      - it
+      - doesn't
+      - work.
+    - |
+      ---
+      - 3
+      - 7
+    - 
+    - '2016-10-16 20:30:20.065139'
+    - '2016-10-16 20:30:20.065139'
+    - 4
+    - 
+    - 
+  - - 31
+    - We need to sort the bills out before the first of the month.
+    - |
+      ---
+      - We
+      - need
+      - to
+      - sort
+      - the
+      - bills
+      - out
+      - before
+      - the
+      - first
+      - of
+      - the
+      - month.
+    - |
+      ---
+      - 3
+      - 6
+    - 
+    - '2016-10-16 20:30:20.072189'
+    - '2016-10-16 20:30:20.072189'
+    - 4
+    - 
+    - 
+  - - 32
+    - My car engine is about to wear out.
+    - |
+      ---
+      - My
+      - car
+      - engine
+      - is
+      - about
+      - to
+      - wear
+      - out.
+    - |
+      ---
+      - 6
+      - 7
+    - 
+    - '2016-10-16 20:31:31.141989'
+    - '2016-10-16 20:31:31.141989'
+    - 5
+    - 
+    - 
+  - - 33
+    - They say a storm is coming, so watch out and don't take any chances.
+    - |
+      ---
+      - They
+      - say
+      - a
+      - storm
+      - is
+      - coming,
+      - so
+      - watch
+      - out
+      - and
+      - don't
+      - take
+      - any
+      - chances.
+    - |
+      ---
+      - 7
+      - 8
+    - 
+    - '2016-10-16 20:31:31.145810'
+    - '2016-10-16 20:31:31.145810'
+    - 5
+    - 
+    - 
+  - - 34
+    - We have to wake up early for work on Monday.
+    - |
+      ---
+      - We
+      - have
+      - to
+      - wake
+      - up
+      - early
+      - for
+      - work
+      - 'on'
+      - Monday.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-16 20:31:31.148677'
+    - '2016-10-16 20:31:31.148677'
+    - 5
+    - 
+    - 
+  - - 35
+    - Your mother wants you to turn the TV off and come for dinner.
+    - |
+      ---
+      - Your
+      - mother
+      - wants
+      - you
+      - to
+      - turn
+      - the
+      - TV
+      - 'off'
+      - and
+      - come
+      - for
+      - dinner.
+    - |
+      ---
+      - 5
+      - 8
+    - 
+    - '2016-10-16 20:31:31.150767'
+    - '2016-10-16 20:31:31.150767'
+    - 5
+    - 
+    - 
+  - - 36
+    - I turned the job down because I don't want to move.
+    - |
+      ---
+      - I
+      - turned
+      - the
+      - job
+      - down
+      - because
+      - I
+      - don't
+      - want
+      - to
+      - move.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-16 20:31:31.154835'
+    - '2016-10-16 20:31:31.154835'
+    - 5
+    - 
+    - 
+  - - 37
+    - I'm going to try these jeans on, but I don't think they will fit.
+    - |
+      ---
+      - I'm
+      - going
+      - to
+      - try
+      - these
+      - jeans
+      - on,
+      - but
+      - I
+      - don't
+      - think
+      - they
+      - will
+      - fit.
+    - |
+      ---
+      - 3
+      - 6
+    - 
+    - '2016-10-16 20:31:31.158766'
+    - '2016-10-16 20:31:31.158766'
+    - 5
+    - 
+    - 
+  - - 38
+    - We threw our old furniture away when we won the lottery.
+    - |
+      ---
+      - We
+      - threw
+      - our
+      - old
+      - furniture
+      - away
+      - when
+      - we
+      - won
+      - the
+      - lottery.
+    - |
+      ---
+      - 1
+      - 5
+    - 
+    - '2016-10-16 20:31:31.162295'
+    - '2016-10-16 20:31:31.162295'
+    - 5
+    - 
+    - 
+  - - 39
+    - She must have eaten something that didn't agree with her because she threw up
+      right after dinner.
+    - |
+      ---
+      - She
+      - must
+      - have
+      - eaten
+      - something
+      - that
+      - didn't
+      - agree
+      - with
+      - her
+      - because
+      - she
+      - threw
+      - up
+      - right
+      - after
+      - dinner.
+    - |
+      ---
+      - 12
+      - 13
+    - 
+    - '2016-10-16 20:31:31.166181'
+    - '2016-10-16 20:31:31.166181'
+    - 5
+    - 
+    - 
+  - - 40
+    - I have to take our new TV back because it doesn't work.
+    - |
+      ---
+      - I
+      - have
+      - to
+      - take
+      - our
+      - new
+      - TV
+      - back
+      - because
+      - it
+      - doesn't
+      - work.
+    - |
+      ---
+      - 3
+      - 7
+    - 
+    - '2016-10-16 20:31:31.168989'
+    - '2016-10-16 20:31:31.168989'
+    - 5
+    - 
+    - 
+  - - 41
+    - We need to sort the bills out before the first of the month.
+    - |
+      ---
+      - We
+      - need
+      - to
+      - sort
+      - the
+      - bills
+      - out
+      - before
+      - the
+      - first
+      - of
+      - the
+      - month.
+    - |
+      ---
+      - 3
+      - 6
+    - 
+    - '2016-10-16 20:31:31.172696'
+    - '2016-10-16 20:31:31.172696'
+    - 5
+    - 
+    - 
+  - - 42
+    - He always shows off on his skateboard.
+    - |
+      ---
+      - He
+      - always
+      - shows
+      - 'off'
+      - 'on'
+      - his
+      - skateboard.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-16 20:31:31.175844'
+    - '2016-10-16 20:31:31.175844'
+    - 5
+    - 
+    - 
+  - - 43
+    - The child ran away from home and has been missing for three days.
+    - |
+      ---
+      - The
+      - child
+      - ran
+      - away
+      - from
+      - home
+      - and
+      - has
+      - been
+      - missing
+      - for
+      - three
+      - days.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-16 20:31:31.179164'
+    - '2016-10-16 20:31:31.179164'
+    - 5
+    - 
+    - 
+  - - 44
+    - The neighbours put the fire out before the firemen arrived.
+    - |
+      ---
+      - The
+      - neighbours
+      - put
+      - the
+      - fire
+      - out
+      - before
+      - the
+      - firemen
+      - arrived.
+    - |
+      ---
+      - 2
+      - 5
+    - 
+    - '2016-10-16 20:31:31.182241'
+    - '2016-10-16 20:31:31.182241'
+    - 5
+    - 
+    - 
+  - - 45
+    - I'll point my boyfriend out when he runs by.
+    - |
+      ---
+      - I'll
+      - point
+      - my
+      - boyfriend
+      - out
+      - when
+      - he
+      - runs
+      - by.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-16 20:31:31.184671'
+    - '2016-10-16 20:31:31.184671'
+    - 5
+    - 
+    - 
+  - - 46
+    - That bully will pay for being mean to my little brother.
+    - |
+      ---
+      - That
+      - bully
+      - will
+      - pay
+      - for
+      - being
+      - mean
+      - to
+      - my
+      - little
+      - brother.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-16 20:31:31.192838'
+    - '2016-10-16 20:31:31.192838'
+    - 5
+    - 
+    - 
+  - - 47
+    - My car engine is about to wear out.
+    - |
+      ---
+      - My
+      - car
+      - engine
+      - is
+      - about
+      - to
+      - wear
+      - out.
+    - |
+      ---
+      - 6
+      - 7
+    - 
+    - '2016-10-16 20:31:40.146852'
+    - '2016-10-16 20:31:40.146852'
+    - 6
+    - 
+    - 
+  - - 48
+    - They say a storm is coming, so watch out and don't take any chances.
+    - |
+      ---
+      - They
+      - say
+      - a
+      - storm
+      - is
+      - coming,
+      - so
+      - watch
+      - out
+      - and
+      - don't
+      - take
+      - any
+      - chances.
+    - |
+      ---
+      - 7
+      - 8
+    - 
+    - '2016-10-16 20:31:40.151297'
+    - '2016-10-16 20:31:40.151297'
+    - 6
+    - 
+    - 
+  - - 49
+    - We have to wake up early for work on Monday.
+    - |
+      ---
+      - We
+      - have
+      - to
+      - wake
+      - up
+      - early
+      - for
+      - work
+      - 'on'
+      - Monday.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-16 20:31:40.154499'
+    - '2016-10-16 20:31:40.154499'
+    - 6
+    - 
+    - 
+  - - 50
+    - Your mother wants you to turn the TV off and come for dinner.
+    - |
+      ---
+      - Your
+      - mother
+      - wants
+      - you
+      - to
+      - turn
+      - the
+      - TV
+      - 'off'
+      - and
+      - come
+      - for
+      - dinner.
+    - |
+      ---
+      - 5
+      - 8
+    - 
+    - '2016-10-16 20:31:40.161700'
+    - '2016-10-16 20:31:40.161700'
+    - 6
+    - 
+    - 
+  - - 51
+    - I turned the job down because I don't want to move.
+    - |
+      ---
+      - I
+      - turned
+      - the
+      - job
+      - down
+      - because
+      - I
+      - don't
+      - want
+      - to
+      - move.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-16 20:31:40.164328'
+    - '2016-10-16 20:31:40.164328'
+    - 6
+    - 
+    - 
+  - - 52
+    - I'm going to try these jeans on, but I don't think they will fit.
+    - |
+      ---
+      - I'm
+      - going
+      - to
+      - try
+      - these
+      - jeans
+      - on,
+      - but
+      - I
+      - don't
+      - think
+      - they
+      - will
+      - fit.
+    - |
+      ---
+      - 3
+      - 6
+    - 
+    - '2016-10-16 20:31:40.167121'
+    - '2016-10-16 20:31:40.167121'
+    - 6
+    - 
+    - 
+  - - 53
+    - We threw our old furniture away when we won the lottery.
+    - |
+      ---
+      - We
+      - threw
+      - our
+      - old
+      - furniture
+      - away
+      - when
+      - we
+      - won
+      - the
+      - lottery.
+    - |
+      ---
+      - 1
+      - 5
+    - 
+    - '2016-10-16 20:31:40.170640'
+    - '2016-10-16 20:31:40.170640'
+    - 6
+    - 
+    - 
+  - - 54
+    - She must have eaten something that didn't agree with her because she threw up
+      right after dinner.
+    - |
+      ---
+      - She
+      - must
+      - have
+      - eaten
+      - something
+      - that
+      - didn't
+      - agree
+      - with
+      - her
+      - because
+      - she
+      - threw
+      - up
+      - right
+      - after
+      - dinner.
+    - |
+      ---
+      - 12
+      - 13
+    - 
+    - '2016-10-16 20:31:40.175199'
+    - '2016-10-16 20:31:40.175199'
+    - 6
+    - 
+    - 
+  - - 55
+    - I have to take our new TV back because it doesn't work.
+    - |
+      ---
+      - I
+      - have
+      - to
+      - take
+      - our
+      - new
+      - TV
+      - back
+      - because
+      - it
+      - doesn't
+      - work.
+    - |
+      ---
+      - 3
+      - 7
+    - 
+    - '2016-10-16 20:31:40.183324'
+    - '2016-10-16 20:31:40.183324'
+    - 6
+    - 
+    - 
+  - - 56
+    - We need to sort the bills out before the first of the month.
+    - |
+      ---
+      - We
+      - need
+      - to
+      - sort
+      - the
+      - bills
+      - out
+      - before
+      - the
+      - first
+      - of
+      - the
+      - month.
+    - |
+      ---
+      - 3
+      - 6
+    - 
+    - '2016-10-16 20:31:40.193089'
+    - '2016-10-16 20:31:40.193089'
+    - 6
+    - 
+    - 
+  - - 57
+    - He always shows off on his skateboard.
+    - |
+      ---
+      - He
+      - always
+      - shows
+      - 'off'
+      - 'on'
+      - his
+      - skateboard.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-16 20:31:40.201680'
+    - '2016-10-16 20:31:40.201680'
+    - 6
+    - 
+    - 
+  - - 58
+    - The child ran away from home and has been missing for three days.
+    - |
+      ---
+      - The
+      - child
+      - ran
+      - away
+      - from
+      - home
+      - and
+      - has
+      - been
+      - missing
+      - for
+      - three
+      - days.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-16 20:31:40.205797'
+    - '2016-10-16 20:31:40.205797'
+    - 6
+    - 
+    - 
+  - - 59
+    - The neighbours put the fire out before the firemen arrived.
+    - |
+      ---
+      - The
+      - neighbours
+      - put
+      - the
+      - fire
+      - out
+      - before
+      - the
+      - firemen
+      - arrived.
+    - |
+      ---
+      - 2
+      - 5
+    - 
+    - '2016-10-16 20:31:40.212151'
+    - '2016-10-16 20:31:40.212151'
+    - 6
+    - 
+    - 
+  - - 60
+    - I'll point my boyfriend out when he runs by.
+    - |
+      ---
+      - I'll
+      - point
+      - my
+      - boyfriend
+      - out
+      - when
+      - he
+      - runs
+      - by.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-16 20:31:40.214144'
+    - '2016-10-16 20:31:40.214144'
+    - 6
+    - 
+    - 
+  - - 61
+    - That bully will pay for being mean to my little brother.
+    - |
+      ---
+      - That
+      - bully
+      - will
+      - pay
+      - for
+      - being
+      - mean
+      - to
+      - my
+      - little
+      - brother.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-16 20:31:40.217825'
+    - '2016-10-16 20:31:40.217825'
+    - 6
+    - 
+    - 
+  - - 62
+    - My car engine is about to wear out.
+    - |
+      ---
+      - My
+      - car
+      - engine
+      - is
+      - about
+      - to
+      - wear
+      - out.
+    - |
+      ---
+      - 6
+      - 7
+    - 
+    - '2016-10-16 20:31:58.072443'
+    - '2016-10-16 20:31:58.072443'
+    - 7
+    - 
+    - 
+  - - 63
+    - They say a storm is coming, so watch out and don't take any chances.
+    - |
+      ---
+      - They
+      - say
+      - a
+      - storm
+      - is
+      - coming,
+      - so
+      - watch
+      - out
+      - and
+      - don't
+      - take
+      - any
+      - chances.
+    - |
+      ---
+      - 7
+      - 8
+    - 
+    - '2016-10-16 20:31:58.076343'
+    - '2016-10-16 20:31:58.076343'
+    - 7
+    - 
+    - 
+  - - 64
+    - We have to wake up early for work on Monday.
+    - |
+      ---
+      - We
+      - have
+      - to
+      - wake
+      - up
+      - early
+      - for
+      - work
+      - 'on'
+      - Monday.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-16 20:31:58.079806'
+    - '2016-10-16 20:31:58.079806'
+    - 7
+    - 
+    - 
+  - - 65
+    - Your mother wants you to turn the TV off and come for dinner.
+    - |
+      ---
+      - Your
+      - mother
+      - wants
+      - you
+      - to
+      - turn
+      - the
+      - TV
+      - 'off'
+      - and
+      - come
+      - for
+      - dinner.
+    - |
+      ---
+      - 5
+      - 8
+    - 
+    - '2016-10-16 20:31:58.083133'
+    - '2016-10-16 20:31:58.083133'
+    - 7
+    - 
+    - 
+  - - 66
+    - I turned the job down because I don't want to move.
+    - |
+      ---
+      - I
+      - turned
+      - the
+      - job
+      - down
+      - because
+      - I
+      - don't
+      - want
+      - to
+      - move.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-16 20:31:58.086218'
+    - '2016-10-16 20:31:58.086218'
+    - 7
+    - 
+    - 
+  - - 67
+    - I'm going to try these jeans on, but I don't think they will fit.
+    - |
+      ---
+      - I'm
+      - going
+      - to
+      - try
+      - these
+      - jeans
+      - on,
+      - but
+      - I
+      - don't
+      - think
+      - they
+      - will
+      - fit.
+    - |
+      ---
+      - 3
+      - 6
+    - 
+    - '2016-10-16 20:31:58.089398'
+    - '2016-10-16 20:31:58.089398'
+    - 7
+    - 
+    - 
+  - - 68
+    - We threw our old furniture away when we won the lottery.
+    - |
+      ---
+      - We
+      - threw
+      - our
+      - old
+      - furniture
+      - away
+      - when
+      - we
+      - won
+      - the
+      - lottery.
+    - |
+      ---
+      - 1
+      - 5
+    - 
+    - '2016-10-16 20:31:58.093721'
+    - '2016-10-16 20:31:58.093721'
+    - 7
+    - 
+    - 
+  - - 69
+    - She must have eaten something that didn't agree with her because she threw up
+      right after dinner.
+    - |
+      ---
+      - She
+      - must
+      - have
+      - eaten
+      - something
+      - that
+      - didn't
+      - agree
+      - with
+      - her
+      - because
+      - she
+      - threw
+      - up
+      - right
+      - after
+      - dinner.
+    - |
+      ---
+      - 12
+      - 13
+    - 
+    - '2016-10-16 20:31:58.097255'
+    - '2016-10-16 20:31:58.097255'
+    - 7
+    - 
+    - 
+  - - 70
+    - I have to take our new TV back because it doesn't work.
+    - |
+      ---
+      - I
+      - have
+      - to
+      - take
+      - our
+      - new
+      - TV
+      - back
+      - because
+      - it
+      - doesn't
+      - work.
+    - |
+      ---
+      - 3
+      - 7
+    - 
+    - '2016-10-16 20:31:58.100459'
+    - '2016-10-16 20:31:58.100459'
+    - 7
+    - 
+    - 
+  - - 71
+    - We need to sort the bills out before the first of the month.
+    - |
+      ---
+      - We
+      - need
+      - to
+      - sort
+      - the
+      - bills
+      - out
+      - before
+      - the
+      - first
+      - of
+      - the
+      - month.
+    - |
+      ---
+      - 3
+      - 6
+    - 
+    - '2016-10-16 20:31:58.103557'
+    - '2016-10-16 20:31:58.103557'
+    - 7
+    - 
+    - 
+  - - 72
+    - He always shows off on his skateboard.
+    - |
+      ---
+      - He
+      - always
+      - shows
+      - 'off'
+      - 'on'
+      - his
+      - skateboard.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-16 20:31:58.106918'
+    - '2016-10-16 20:31:58.106918'
+    - 7
+    - 
+    - 
+  - - 73
+    - The child ran away from home and has been missing for three days.
+    - |
+      ---
+      - The
+      - child
+      - ran
+      - away
+      - from
+      - home
+      - and
+      - has
+      - been
+      - missing
+      - for
+      - three
+      - days.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-16 20:31:58.114607'
+    - '2016-10-16 20:31:58.114607'
+    - 7
+    - 
+    - 
+  - - 74
+    - The neighbours put the fire out before the firemen arrived.
+    - |
+      ---
+      - The
+      - neighbours
+      - put
+      - the
+      - fire
+      - out
+      - before
+      - the
+      - firemen
+      - arrived.
+    - |
+      ---
+      - 2
+      - 5
+    - 
+    - '2016-10-16 20:31:58.118017'
+    - '2016-10-16 20:31:58.118017'
+    - 7
+    - 
+    - 
+  - - 75
+    - I'll point my boyfriend out when he runs by.
+    - |
+      ---
+      - I'll
+      - point
+      - my
+      - boyfriend
+      - out
+      - when
+      - he
+      - runs
+      - by.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-16 20:31:58.121508'
+    - '2016-10-16 20:31:58.121508'
+    - 7
+    - 
+    - 
+  - - 76
+    - That bully will pay for being mean to my little brother.
+    - |
+      ---
+      - That
+      - bully
+      - will
+      - pay
+      - for
+      - being
+      - mean
+      - to
+      - my
+      - little
+      - brother.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-16 20:31:58.124420'
+    - '2016-10-16 20:31:58.124420'
+    - 7
+    - 
+    - 
+  - - 77
+    - I picked out three sweaters for you to try on.
+    - |
+      ---
+      - I
+      - picked
+      - out
+      - three
+      - sweaters
+      - for
+      - you
+      - to
+      - try
+      - on.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-16 20:31:58.127800'
+    - '2016-10-16 20:31:58.127800'
+    - 7
+    - 
+    - 
+  - - 80
+    - We must respect the will of the individual.
+    - |
+      ---
+      - We
+      - must
+      - respect
+      - the
+      - will
+      - of
+      - the
+      - individual.
+    - |
+      ---
+      - 2
+      - 5
+    - 
+    - '2016-10-24 03:16:50.568389'
+    - '2016-10-24 03:16:50.568389'
+    - 10
+    - 'null'
+    - "個人の意思は尊重しなければいけない。"
+  - - 81
+    - We must respect the will of the individual.
+    - |
+      ---
+      - We
+      - must
+      - respect
+      - the
+      - will
+      - of
+      - the
+      - individual.
+    - |
+      ---
+      - 2
+      - 5
+    - 
+    - '2016-10-24 03:43:58.201490'
+    - '2016-10-24 03:43:58.201490'
+    - 11
+    - 'null'
+    - "個人の意思は尊重しなければいけない。"
+  - - 82
+    - Take it easy, I can assure you that everything will turn out fine.
+    - |
+      ---
+      - Take
+      - it
+      - easy,
+      - I
+      - can
+      - assure
+      - you
+      - that
+      - everything
+      - will
+      - turn
+      - out
+      - fine.
+    - |
+      ---
+      - 10
+      - 11
+    - 
+    - '2016-10-24 03:43:58.204011'
+    - '2016-10-24 03:43:58.204011'
+    - 11
+    - 'null'
+    - "気楽にいけよ。大丈夫、すべてうまくいくさ。"
+  - - 83
+    - Let go of your negative outlook on life. Always maintain a positive attitude.
+    - |
+      ---
+      - Let
+      - go
+      - of
+      - your
+      - negative
+      - outlook
+      - 'on'
+      - life.
+      - Always
+      - maintain
+      - a
+      - positive
+      - attitude.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-24 03:43:58.206750'
+    - '2016-10-24 03:43:58.206750'
+    - 11
+    - 'null'
+    - "悲観的な人生観は捨てて、前向きな態度を常に持ち続けよう。"
+  - - 84
+    - You should be fair to everyone regardless of national origin, gender, or creed.
+    - |
+      ---
+      - You
+      - should
+      - be
+      - fair
+      - to
+      - everyone
+      - regardless
+      - of
+      - national
+      - origin,
+      - gender,
+      - or
+      - creed.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-24 03:43:58.212126'
+    - '2016-10-24 03:43:58.212126'
+    - 11
+    - 'null'
+    - "生まれた国、性別、信条に関係なく、誰に対しても公平でなくてはならない。"
+  - - 85
+    - Equality is guaranteed by the Constitution.
+    - |
+      ---
+      - Equality
+      - is
+      - guaranteed
+      - by
+      - the
+      - Constitution.
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-24 03:43:58.215219'
+    - '2016-10-24 03:43:58.215219'
+    - 11
+    - 'null'
+    - "平等は憲法で守られている。"
+  - - 86
+    - He leaned against the pillar and gazed at the Statue of Liberty.
+    - |
+      ---
+      - He
+      - leaned
+      - against
+      - the
+      - pillar
+      - and
+      - gazed
+      - at
+      - the
+      - Statue
+      - of
+      - Liberty.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-24 03:43:58.218326'
+    - '2016-10-24 03:43:58.218326'
+    - 11
+    - 'null'
+    - "彼は柱に寄りかかって、自由の女神像をじっと見つめた。"
+  - - 87
+    - A woman passed by me giving off a subtle scent of perfume. It reminded me of
+      my ex-girlfriend.
+    - |
+      ---
+      - A
+      - woman
+      - passed
+      - by
+      - me
+      - giving
+      - 'off'
+      - a
+      - subtle
+      - scent
+      - of
+      - perfume.
+      - It
+      - reminded
+      - me
+      - of
+      - my
+      - ex-girlfriend.
+    - |
+      ---
+      - 13
+      - 15
+    - 
+    - '2016-10-24 03:43:58.220918'
+    - '2016-10-24 03:43:58.220918'
+    - 11
+    - 'null'
+    - "香水のほのかな香りを漂わせながら、一人の女性が僕の前に通り過ぎた。前の彼女のことを思い出してしまった。"
+  - - 88
+    - '"I''m soaked with sweat." "Stand back! You stink. Take a shower."'
+    - |
+      ---
+      - "\"I'm"
+      - soaked
+      - with
+      - sweat."
+      - "\"Stand"
+      - back!
+      - You
+      - stink.
+      - Take
+      - a
+      - shower."
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-24 03:43:58.224260'
+    - '2016-10-24 03:43:58.224260'
+    - 11
+    - 'null'
+    - "「汗でびしょびしょだよ。」「来ないで！臭いわ。シャワーを浴びて。」"
+  - - 89
+    - Bob was so beside himself that he could scarcely tell fact from fiction.
+    - |
+      ---
+      - Bob
+      - was
+      - so
+      - beside
+      - himself
+      - that
+      - he
+      - could
+      - scarcely
+      - tell
+      - fact
+      - from
+      - fiction.
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-24 03:43:58.229188'
+    - '2016-10-24 03:43:58.229188'
+    - 11
+    - 'null'
+    - "ボブはひどく取り乱していて、現実と虚構の区別がほとんどできなかった。"
+  - - 90
+    - His new novel, which combines prose with his gift for poetry, is going to be
+      published.
+    - |
+      ---
+      - His
+      - new
+      - novel,
+      - which
+      - combines
+      - prose
+      - with
+      - his
+      - gift
+      - for
+      - poetry,
+      - is
+      - going
+      - to
+      - be
+      - published.
+    - |
+      ---
+      - 4
+      - 6
+    - 
+    - '2016-10-24 03:43:58.234321'
+    - '2016-10-24 03:43:58.234321'
+    - 11
+    - 'null'
+    - "まもなく出版になる彼の小説は、散文に彼の詩の才能を融合させたものだ。"
+  - - 91
+    - An up-to-date edition of the encyclopedia will come out next month.
+    - |
+      ---
+      - An
+      - up-to-date
+      - edition
+      - of
+      - the
+      - encyclopedia
+      - will
+      - come
+      - out
+      - next
+      - month.
+    - |
+      ---
+      - 7
+      - 8
+    - 
+    - '2016-10-24 03:43:58.238253'
+    - '2016-10-24 03:43:58.238253'
+    - 11
+    - 'null'
+    - "来月、その百科事典の最新版が出る。"
+  - - 92
+    - Ms. Yamada translated the fascinating fairy tale into plain Japanese.
+    - |
+      ---
+      - Ms.
+      - Yamada
+      - translated
+      - the
+      - fascinating
+      - fairy
+      - tale
+      - into
+      - plain
+      - Japanese.
+    - |
+      ---
+      - 2
+      - 7
+    - 
+    - '2016-10-24 03:43:58.240618'
+    - '2016-10-24 03:43:58.240618'
+    - 11
+    - 'null'
+    - "山田さんがその心ひかれるおとぎ話をやさしい日本語に翻訳した。"
+  - - 93
+    - The following passage is quoted from a well-known fable.
+    - |
+      ---
+      - The
+      - following
+      - passage
+      - is
+      - quoted
+      - from
+      - a
+      - well-known
+      - fable.
+    - |
+      ---
+      - 3
+      - 5
+    - 
+    - '2016-10-24 03:43:58.244780'
+    - '2016-10-24 03:43:58.244780'
+    - 11
+    - 'null'
+    - "以下の一節は有名な童話からの引用です。"
+  - - 94
+    - '"Are you familiar with contemporary literature?" "I know next to nothing about
+      it."'
+    - |
+      ---
+      - "\"Are"
+      - you
+      - familiar
+      - with
+      - contemporary
+      - literature?"
+      - "\"I"
+      - know
+      - next
+      - to
+      - nothing
+      - about
+      - it."
+    - |
+      ---
+      - 0
+      - 3
+    - 
+    - '2016-10-24 03:43:58.247611'
+    - '2016-10-24 03:43:58.247611'
+    - 11
+    - 'null'
+    - "「現代文学に詳しいですか？」「ほとんど知りません。」"
+  - - 95
+    - At times I confuse "curve" with "carve."
+    - |
+      ---
+      - At
+      - times
+      - I
+      - confuse
+      - '"curve"'
+      - with
+      - '"carve."'
+    - |
+      ---
+      - 3
+      - 5
+    - 
+    - '2016-10-24 03:43:58.251736'
+    - '2016-10-24 03:43:58.251736'
+    - 11
+    - 'null'
+    - 時々、"curve"と"carve"を混同してしまう。
+  - - 96
+    - Don't be shy. Your pronunciation is more or less correct.
+    - |
+      ---
+      - Don't
+      - be
+      - shy.
+      - Your
+      - pronunciation
+      - is
+      - more
+      - or
+      - less
+      - correct.
+    - |
+      ---
+      - 5
+      - 7
+    - 
+    - '2016-10-24 03:43:58.254223'
+    - '2016-10-24 03:43:58.254223'
+    - 11
+    - 'null'
+    - "恥ずかしがらないで、あなたの発音はだいたいあっています。"
+  - - 97
+    - This article contains tips for those who are eager to increase their vocabulary.
+    - |
+      ---
+      - This
+      - article
+      - contains
+      - tips
+      - for
+      - those
+      - who
+      - are
+      - eager
+      - to
+      - increase
+      - their
+      - vocabulary.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-24 03:43:58.256948'
+    - '2016-10-24 03:43:58.256948'
+    - 11
+    - 'null'
+    - "この記事には、語彙を本気で増やしたいと思う人々に役立つ情報が含まれています。"
+  - - 98
+    - His latest works are on display at the city hall. They are fabulous beyond description.
+    - |
+      ---
+      - His
+      - latest
+      - works
+      - are
+      - 'on'
+      - display
+      - at
+      - the
+      - city
+      - hall.
+      - They
+      - are
+      - fabulous
+      - beyond
+      - description.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-24 03:43:58.259637'
+    - '2016-10-24 03:43:58.259637'
+    - 11
+    - 'null'
+    - "彼の最新の作品が市庁舎で展示されているの。言葉にできないほど素敵よ。"
+  - - 99
+    - '"Could you move over a little?" "Oh, sorry. I didn''t realize I was talking
+      up so much space."'
+    - |
+      ---
+      - "\"Could"
+      - you
+      - move
+      - over
+      - a
+      - little?"
+      - "\"Oh,"
+      - sorry.
+      - I
+      - didn't
+      - realize
+      - I
+      - was
+      - talking
+      - up
+      - so
+      - much
+      - space."
+    - |
+      ---
+      - 13
+      - 14
+    - 
+    - '2016-10-24 03:43:58.261614'
+    - '2016-10-24 03:43:58.261614'
+    - 11
+    - 'null'
+    - "「すこし詰めていただけませんか？」「あ、ごめんなさい。こんなに場所を取っていたなんて気付きませんでした。」"
+  - - 101
+    - I begged Richie to lend me a hundred bucks, but he shook his head, saying, "I'm
+      broke, too."
+    - |
+      ---
+      - I
+      - begged
+      - Richie
+      - to
+      - lend
+      - me
+      - a
+      - hundred
+      - bucks,
+      - but
+      - he
+      - shook
+      - his
+      - head,
+      - saying,
+      - "\"I'm"
+      - broke,
+      - too."
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-24 04:48:40.387651'
+    - '2016-10-24 04:48:40.387651'
+    - 12
+    - 'null'
+    - "$100貸してくれとリッチーに頼んだら、彼も「俺もお金がないんだよ！」と言って首を横に振った。"
+  - - 102
+    - '"I''m apt to buy things on impulse whenever something is on sale." "So am I."'
+    - |
+      ---
+      - "\"I'm"
+      - apt
+      - to
+      - buy
+      - things
+      - 'on'
+      - impulse
+      - whenever
+      - something
+      - is
+      - 'on'
+      - sale."
+      - "\"So"
+      - am
+      - I."
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-24 04:48:40.390702'
+    - '2016-10-24 04:48:40.390702'
+    - 12
+    - 'null'
+    - "「安売りをしているといつも衝動買いしてしまうたちです。」「私も。」"
+  - - 103
+    - As it is, ordinary people cannot afford to purchase such luxuries.
+    - |
+      ---
+      - As
+      - it
+      - is,
+      - ordinary
+      - people
+      - cannot
+      - afford
+      - to
+      - purchase
+      - such
+      - luxuries.
+    - |
+      ---
+      - 6
+      - 7
+    - 
+    - '2016-10-24 04:48:40.393594'
+    - '2016-10-24 04:48:40.393594'
+    - 12
+    - 'null'
+    - "実際のところ、普通の人々にはそんな贅沢品を買う余裕はない。"
+  - - 104
+    - As we anticipated, the unemployment rate has risen three quarters in a row.
+    - |
+      ---
+      - As
+      - we
+      - anticipated,
+      - the
+      - unemployment
+      - rate
+      - has
+      - risen
+      - three
+      - quarters
+      - in
+      - a
+      - row.
+    - |
+      ---
+      - 7
+      - 10
+    - 
+    - '2016-10-24 04:48:40.395639'
+    - '2016-10-24 04:48:40.395639'
+    - 12
+    - 'null'
+    - "予期していた通り、失業率は3四半期連続で上昇した。"
+  - - 105
+    - I have to cut down on my expense, so from now on, I'm going to keep track of
+      them on a daily basis.
+    - |
+      ---
+      - I
+      - have
+      - to
+      - cut
+      - down
+      - 'on'
+      - my
+      - expense,
+      - so
+      - from
+      - now
+      - on,
+      - I'm
+      - going
+      - to
+      - keep
+      - track
+      - of
+      - them
+      - 'on'
+      - a
+      - daily
+      - basis.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-24 04:48:40.398756'
+    - '2016-10-24 04:48:40.398756'
+    - 12
+    - 'null'
+    - "出費を切り詰めないと。だから、これからは使ったお金は1日単位で記録していくつもりだ。"
+  - - 106
+    - In any case, the union has to compromise to a certain extent.
+    - |
+      ---
+      - In
+      - any
+      - case,
+      - the
+      - union
+      - has
+      - to
+      - compromise
+      - to
+      - a
+      - certain
+      - extent.
+    - |
+      ---
+      - 7
+      - 8
+    - 
+    - '2016-10-24 04:48:40.401318'
+    - '2016-10-24 04:48:40.401318'
+    - 12
+    - 'null'
+    - "いずれにせよ、組合側はある程度妥協しなければならない。"
+  - - 107
+    - Competent mechanics are in great demand, so they earn decent wages.
+    - |
+      ---
+      - Competent
+      - mechanics
+      - are
+      - in
+      - great
+      - demand,
+      - so
+      - they
+      - earn
+      - decent
+      - wages.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-24 04:48:40.402961'
+    - '2016-10-24 04:48:40.402961'
+    - 12
+    - 'null'
+    - "有能な整備士は引っ張りだこだから、なかなかの賃金を稼げる。"
+  - - 108
+    - The president announced a concrete plan to carry out welfare reform.
+    - |
+      ---
+      - The
+      - president
+      - announced
+      - a
+      - concrete
+      - plan
+      - to
+      - carry
+      - out
+      - welfare
+      - reform.
+    - |
+      ---
+      - 7
+      - 8
+    - 
+    - '2016-10-24 04:48:40.405381'
+    - '2016-10-24 04:48:40.405381'
+    - 12
+    - 'null'
+    - "大統領は福祉改革を実行するための具体的な計画を発表した。"
+  - - 109
+    - His policy will no doubt lead to dismal consequences. It needs a through review.
+    - |
+      ---
+      - His
+      - policy
+      - will
+      - 'no'
+      - doubt
+      - lead
+      - to
+      - dismal
+      - consequences.
+      - It
+      - needs
+      - a
+      - through
+      - review.
+    - |
+      ---
+      - 5
+      - 6
+    - 
+    - '2016-10-24 04:48:40.407469'
+    - '2016-10-24 04:48:40.407469'
+    - 12
+    - 'null'
+    - "彼の政策はきっと暗い結果を招くだろう。徹底的な見直しが必要だ。"
+  - - 110
+    - It goes without saying that the aging of society is inevitable.
+    - |
+      ---
+      - It
+      - goes
+      - without
+      - saying
+      - that
+      - the
+      - aging
+      - of
+      - society
+      - is
+      - inevitable.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-24 04:48:40.408964'
+    - '2016-10-24 04:48:40.408964'
+    - 12
+    - 'null'
+    - "社会の高齢化が避けられないことは言うまでもない。"
+  - - 111
+    - Please take a look at this chart. It indicates that juvenile delinquency is
+      on the increase at an alarming rate.
+    - |
+      ---
+      - Please
+      - take
+      - a
+      - look
+      - at
+      - this
+      - chart.
+      - It
+      - indicates
+      - that
+      - juvenile
+      - delinquency
+      - is
+      - 'on'
+      - the
+      - increase
+      - at
+      - an
+      - alarming
+      - rate.
+    - |
+      ---
+      - 12
+      - 13
+    - 
+    - '2016-10-24 04:48:40.410677'
+    - '2016-10-24 04:48:40.410677'
+    - 12
+    - 'null'
+    - "この表をご覧になってください。少年非行が深刻な割合で増加していることを示しています。"
+  - - 112
+    - In many business districts, there are a lot of vacant lots which have been for
+      sale for years.
+    - |
+      ---
+      - In
+      - many
+      - business
+      - districts,
+      - there
+      - are
+      - a
+      - lot
+      - of
+      - vacant
+      - lots
+      - which
+      - have
+      - been
+      - for
+      - sale
+      - for
+      - years.
+    - |
+      ---
+      - 13
+      - 14
+    - 
+    - '2016-10-24 04:48:40.412887'
+    - '2016-10-24 04:48:40.412887'
+    - 12
+    - 'null'
+    - "多くの商業地区では、数年間売りに出されている空き地がたくさんある。"
+  - - 113
+    - In all likelihood, the birthrate will continue to decline steadily for years
+      to come.
+    - |
+      ---
+      - In
+      - all
+      - likelihood,
+      - the
+      - birthrate
+      - will
+      - continue
+      - to
+      - decline
+      - steadily
+      - for
+      - years
+      - to
+      - come.
+    - |
+      ---
+      - 6
+      - 7
+    - 
+    - '2016-10-24 04:48:40.415062'
+    - '2016-10-24 04:48:40.415062'
+    - 12
+    - 'null'
+    - "ほぼ間違いなくこの先数年、出生率は減少の一途をたどるだろう。"
+  - - 114
+    - The power plant supplies the remote county with electricity.
+    - |
+      ---
+      - The
+      - power
+      - plant
+      - supplies
+      - the
+      - remote
+      - county
+      - with
+      - electricity.
+    - |
+      ---
+      - 3
+      - 7
+    - 
+    - '2016-10-24 04:48:40.416962'
+    - '2016-10-24 04:48:40.416962'
+    - 12
+    - 'null'
+    - "その発電所は遠く離れた郡に電気を供給している。"
+  - - 115
+    - You are not allowed to operate this device without permission.
+    - |
+      ---
+      - You
+      - are
+      - not
+      - allowed
+      - to
+      - operate
+      - this
+      - device
+      - without
+      - permission.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-24 04:48:40.418564'
+    - '2016-10-24 04:48:40.418564'
+    - 12
+    - 'null'
+    - "許可なくこの装置を操作することはできません。"
+  - - 116
+    - In fact, the inhabitants have been exposed to radiation.
+    - |
+      ---
+      - In
+      - fact,
+      - the
+      - inhabitants
+      - have
+      - been
+      - exposed
+      - to
+      - radiation.
+    - |
+      ---
+      - 6
+      - 7
+    - 
+    - '2016-10-24 04:48:40.421461'
+    - '2016-10-24 04:48:40.421461'
+    - 12
+    - 'null'
+    - "実は、住民たちは放射能にさらされていた。"
+  - - 117
+    - One cannot emphasize too much the potential danger of nuclear energy.
+    - |
+      ---
+      - One
+      - cannot
+      - emphasize
+      - too
+      - much
+      - the
+      - potential
+      - danger
+      - of
+      - nuclear
+      - energy.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-24 04:48:40.423293'
+    - '2016-10-24 04:48:40.423293'
+    - 12
+    - 'null'
+    - "核エネルギーの潜在的な危険性は、いくら強調してもし過ぎることはない。"
+  - - 118
+    - For years the press overlooked the problem. But now, if anything, they are making
+      too much of it.
+    - |
+      ---
+      - For
+      - years
+      - the
+      - press
+      - overlooked
+      - the
+      - problem.
+      - But
+      - now,
+      - if
+      - anything,
+      - they
+      - are
+      - making
+      - too
+      - much
+      - of
+      - it.
+    - |
+      ---
+      - 13
+      - 16
+    - 
+    - '2016-10-24 04:48:40.425852'
+    - '2016-10-24 04:48:40.425852'
+    - 12
+    - 'null'
+    - "過去数年間その問題を見過ごしていた報道機関が、今ではどちらかといえばそのことを重視しすぎている。"
+  - - 119
+    - The research institute was established in the late 1960s.
+    - |
+      ---
+      - The
+      - research
+      - institute
+      - was
+      - established
+      - in
+      - the
+      - late
+      - 1960s.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-24 04:48:40.428251'
+    - '2016-10-24 04:48:40.428251'
+    - 12
+    - 'null'
+    - "その研究所は1960年代後半に設立された。"
+  - - 120
+    - Why don't you consult Starr in person? He's by far the most prominent attorney
+      around here.
+    - |
+      ---
+      - Why
+      - don't
+      - you
+      - consult
+      - Starr
+      - in
+      - person?
+      - He's
+      - by
+      - far
+      - the
+      - most
+      - prominent
+      - attorney
+      - around
+      - here.
+    - |
+      ---
+      - 3
+      - 5
+    - 
+    - '2016-10-24 04:48:40.430995'
+    - '2016-10-24 04:48:40.430995'
+    - 12
+    - 'null'
+    - "スターさんに直接相談したらどうですか？この辺りでは文句無しで一番有名な弁護士ですよ。"
+  - - 121
+    - I'll write it down just in case, because I have a bad memory.
+    - |
+      ---
+      - I'll
+      - write
+      - it
+      - down
+      - just
+      - in
+      - case,
+      - because
+      - I
+      - have
+      - a
+      - bad
+      - memory.
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-24 04:48:40.434217'
+    - '2016-10-24 04:48:40.434217'
+    - 12
+    - 'null'
+    - "念のためにメモしておきます。記憶力が悪いから。"
+  - - 122
+    - The lawyer recommended that his client take legal action against the insurance
+      company.
+    - |
+      ---
+      - The
+      - lawyer
+      - recommended
+      - that
+      - his
+      - client
+      - take
+      - legal
+      - action
+      - against
+      - the
+      - insurance
+      - company.
+    - |
+      ---
+      - 2
+      - 9
+    - 
+    - '2016-10-24 04:48:40.436323'
+    - '2016-10-24 04:48:40.436323'
+    - 12
+    - 'null'
+    - "弁護士は依頼人に、保険会社に対して法的手段を取ることを勧めた。"
+  - - 123
+    - Are you japanese?
+    - |
+      ---
+      - Are
+      - you
+      - japanese?
+    - |
+      ---
+      - 1
+      - 0
+      - 2
+    - 
+    - '2016-10-24 17:07:56.166913'
+    - '2016-10-24 17:07:56.166913'
+    - 13
+    - 'null'
+    - fa
+  - - 124
+    - Brian asked Judy out to dinner and a movie.
+    - |
+      ---
+      - Brian
+      - asked
+      - Judy
+      - out
+      - to
+      - dinner
+      - and
+      - a
+      - movie.
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-26 23:57:24.328494'
+    - '2016-10-26 23:57:24.328494'
+    - 3
+    - 'null'
+    - 
+  - - 125
+    - I asked around but nobody has seen my wallet.
+    - |
+      ---
+      - I
+      - asked
+      - around
+      - but
+      - nobody
+      - has
+      - seen
+      - my
+      - wallet.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:24.333109'
+    - '2016-10-26 23:57:24.333109'
+    - 3
+    - 'null'
+    - 
+  - - 126
+    - You'll have to back up your car so that I can get out.
+    - |
+      ---
+      - You'll
+      - have
+      - to
+      - back
+      - up
+      - your
+      - car
+      - so
+      - that
+      - I
+      - can
+      - get
+      - out.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:24.334701'
+    - '2016-10-26 23:57:24.334701'
+    - 3
+    - 'null'
+    - 
+  - - 127
+    - My wife backed me up over my decision to quit my job.
+    - |
+      ---
+      - My
+      - wife
+      - backed
+      - me
+      - up
+      - over
+      - my
+      - decision
+      - to
+      - quit
+      - my
+      - job.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:24.336535'
+    - '2016-10-26 23:57:24.336535'
+    - 3
+    - 'null'
+    - 
+  - - 128
+    - The racing car blew up after it crashed into the fence.
+    - |
+      ---
+      - The
+      - racing
+      - car
+      - blew
+      - up
+      - after
+      - it
+      - crashed
+      - into
+      - the
+      - fence.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:24.338685'
+    - '2016-10-26 23:57:24.338685'
+    - 3
+    - 'null'
+    - 
+  - - 129
+    - Our car broke down at the side of the highway in the snowstom.
+    - |
+      ---
+      - Our
+      - car
+      - broke
+      - down
+      - at
+      - the
+      - side
+      - of
+      - the
+      - highway
+      - in
+      - the
+      - snowstom.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:24.340777'
+    - '2016-10-26 23:57:24.340777'
+    - 3
+    - 'null'
+    - 
+  - - 130
+    - Somebody broke in last night and stole our stereo.
+    - |
+      ---
+      - Somebody
+      - broke
+      - in
+      - last
+      - night
+      - and
+      - stole
+      - our
+      - stereo.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:24.342691'
+    - '2016-10-26 23:57:24.342691'
+    - 3
+    - 'null'
+    - 
+  - - 131
+    - The fireman had to break into the room to rescue the children.
+    - |
+      ---
+      - The
+      - fireman
+      - had
+      - to
+      - break
+      - into
+      - the
+      - room
+      - to
+      - rescue
+      - the
+      - children.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:24.344371'
+    - '2016-10-26 23:57:24.344371'
+    - 3
+    - 'null'
+    - 
+  - - 132
+    - My boyfriend and I broke up before I moved to America.
+    - |
+      ---
+      - My
+      - boyfriend
+      - and
+      - I
+      - broke
+      - up
+      - before
+      - I
+      - moved
+      - to
+      - America.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:24.345914'
+    - '2016-10-26 23:57:24.345914'
+    - 3
+    - 'null'
+    - 
+  - - 133
+    - The prisoners broke up of jail when the guards weren't looking.
+    - |
+      ---
+      - The
+      - prisoners
+      - broke
+      - up
+      - of
+      - jail
+      - when
+      - the
+      - guards
+      - weren't
+      - looking.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:24.347731'
+    - '2016-10-26 23:57:24.347731'
+    - 3
+    - 'null'
+    - 
+  - - 134
+    - My grandparents brought me up after my parents died.
+    - |
+      ---
+      - My
+      - grandparents
+      - brought
+      - me
+      - up
+      - after
+      - my
+      - parents
+      - died.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:24.349382'
+    - '2016-10-26 23:57:24.349382'
+    - 3
+    - 'null'
+    - 
+  - - 135
+    - We called around but we weren't able to find the car part we needed.
+    - |
+      ---
+      - We
+      - called
+      - around
+      - but
+      - we
+      - weren't
+      - able
+      - to
+      - find
+      - the
+      - car
+      - part
+      - we
+      - needed.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:24.350937'
+    - '2016-10-26 23:57:24.350937'
+    - 3
+    - 'null'
+    - 
+  - - 136
+    - I called the company back but the offices were closed for the weekend.
+    - |
+      ---
+      - I
+      - called
+      - the
+      - company
+      - back
+      - but
+      - the
+      - offices
+      - were
+      - closed
+      - for
+      - the
+      - weekend.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:24.352489'
+    - '2016-10-26 23:57:24.352489'
+    - 3
+    - 'null'
+    - 
+  - - 137
+    - Jason called the wedding off because he wasn't in love with his fiance.
+    - |
+      ---
+      - Jason
+      - called
+      - the
+      - wedding
+      - 'off'
+      - because
+      - he
+      - wasn't
+      - in
+      - love
+      - with
+      - his
+      - fiance.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:24.354163'
+    - '2016-10-26 23:57:24.354163'
+    - 3
+    - 'null'
+    - 
+  - - 138
+    - The professor called on me for question 1.
+    - |
+      ---
+      - The
+      - professor
+      - called
+      - 'on'
+      - me
+      - for
+      - question
+      - '1.'
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:24.355768'
+    - '2016-10-26 23:57:24.355768'
+    - 3
+    - 'null'
+    - 
+  - - 139
+    - Brian asked Judy out to dinner and a movie.
+    - |
+      ---
+      - Brian
+      - asked
+      - Judy
+      - out
+      - to
+      - dinner
+      - and
+      - a
+      - movie.
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-26 23:57:26.772017'
+    - '2016-10-26 23:57:26.772017'
+    - 3
+    - 'null'
+    - 
+  - - 140
+    - I asked around but nobody has seen my wallet.
+    - |
+      ---
+      - I
+      - asked
+      - around
+      - but
+      - nobody
+      - has
+      - seen
+      - my
+      - wallet.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:26.774161'
+    - '2016-10-26 23:57:26.774161'
+    - 3
+    - 'null'
+    - 
+  - - 141
+    - You'll have to back up your car so that I can get out.
+    - |
+      ---
+      - You'll
+      - have
+      - to
+      - back
+      - up
+      - your
+      - car
+      - so
+      - that
+      - I
+      - can
+      - get
+      - out.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:26.775703'
+    - '2016-10-26 23:57:26.775703'
+    - 3
+    - 'null'
+    - 
+  - - 142
+    - My wife backed me up over my decision to quit my job.
+    - |
+      ---
+      - My
+      - wife
+      - backed
+      - me
+      - up
+      - over
+      - my
+      - decision
+      - to
+      - quit
+      - my
+      - job.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:26.778199'
+    - '2016-10-26 23:57:26.778199'
+    - 3
+    - 'null'
+    - 
+  - - 143
+    - The racing car blew up after it crashed into the fence.
+    - |
+      ---
+      - The
+      - racing
+      - car
+      - blew
+      - up
+      - after
+      - it
+      - crashed
+      - into
+      - the
+      - fence.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:26.780325'
+    - '2016-10-26 23:57:26.780325'
+    - 3
+    - 'null'
+    - 
+  - - 144
+    - Our car broke down at the side of the highway in the snowstom.
+    - |
+      ---
+      - Our
+      - car
+      - broke
+      - down
+      - at
+      - the
+      - side
+      - of
+      - the
+      - highway
+      - in
+      - the
+      - snowstom.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:26.783093'
+    - '2016-10-26 23:57:26.783093'
+    - 3
+    - 'null'
+    - 
+  - - 145
+    - Somebody broke in last night and stole our stereo.
+    - |
+      ---
+      - Somebody
+      - broke
+      - in
+      - last
+      - night
+      - and
+      - stole
+      - our
+      - stereo.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:26.786509'
+    - '2016-10-26 23:57:26.786509'
+    - 3
+    - 'null'
+    - 
+  - - 146
+    - The fireman had to break into the room to rescue the children.
+    - |
+      ---
+      - The
+      - fireman
+      - had
+      - to
+      - break
+      - into
+      - the
+      - room
+      - to
+      - rescue
+      - the
+      - children.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:26.789636'
+    - '2016-10-26 23:57:26.789636'
+    - 3
+    - 'null'
+    - 
+  - - 147
+    - My boyfriend and I broke up before I moved to America.
+    - |
+      ---
+      - My
+      - boyfriend
+      - and
+      - I
+      - broke
+      - up
+      - before
+      - I
+      - moved
+      - to
+      - America.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:26.791907'
+    - '2016-10-26 23:57:26.791907'
+    - 3
+    - 'null'
+    - 
+  - - 148
+    - The prisoners broke up of jail when the guards weren't looking.
+    - |
+      ---
+      - The
+      - prisoners
+      - broke
+      - up
+      - of
+      - jail
+      - when
+      - the
+      - guards
+      - weren't
+      - looking.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:26.795473'
+    - '2016-10-26 23:57:26.795473'
+    - 3
+    - 'null'
+    - 
+  - - 149
+    - My grandparents brought me up after my parents died.
+    - |
+      ---
+      - My
+      - grandparents
+      - brought
+      - me
+      - up
+      - after
+      - my
+      - parents
+      - died.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:26.799028'
+    - '2016-10-26 23:57:26.799028'
+    - 3
+    - 'null'
+    - 
+  - - 150
+    - We called around but we weren't able to find the car part we needed.
+    - |
+      ---
+      - We
+      - called
+      - around
+      - but
+      - we
+      - weren't
+      - able
+      - to
+      - find
+      - the
+      - car
+      - part
+      - we
+      - needed.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:26.804303'
+    - '2016-10-26 23:57:26.804303'
+    - 3
+    - 'null'
+    - 
+  - - 151
+    - I called the company back but the offices were closed for the weekend.
+    - |
+      ---
+      - I
+      - called
+      - the
+      - company
+      - back
+      - but
+      - the
+      - offices
+      - were
+      - closed
+      - for
+      - the
+      - weekend.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:26.807760'
+    - '2016-10-26 23:57:26.807760'
+    - 3
+    - 'null'
+    - 
+  - - 152
+    - Jason called the wedding off because he wasn't in love with his fiance.
+    - |
+      ---
+      - Jason
+      - called
+      - the
+      - wedding
+      - 'off'
+      - because
+      - he
+      - wasn't
+      - in
+      - love
+      - with
+      - his
+      - fiance.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:26.812597'
+    - '2016-10-26 23:57:26.812597'
+    - 3
+    - 'null'
+    - 
+  - - 153
+    - The professor called on me for question 1.
+    - |
+      ---
+      - The
+      - professor
+      - called
+      - 'on'
+      - me
+      - for
+      - question
+      - '1.'
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:26.816337'
+    - '2016-10-26 23:57:26.816337'
+    - 3
+    - 'null'
+    - 
+  - - 154
+    - Brian asked Judy out to dinner and a movie.
+    - |
+      ---
+      - Brian
+      - asked
+      - Judy
+      - out
+      - to
+      - dinner
+      - and
+      - a
+      - movie.
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-26 23:57:45.432415'
+    - '2016-10-26 23:57:45.432415'
+    - 3
+    - 'null'
+    - 
+  - - 155
+    - I asked around but nobody has seen my wallet.
+    - |
+      ---
+      - I
+      - asked
+      - around
+      - but
+      - nobody
+      - has
+      - seen
+      - my
+      - wallet.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:45.436595'
+    - '2016-10-26 23:57:45.436595'
+    - 3
+    - 'null'
+    - 
+  - - 156
+    - You'll have to back up your car so that I can get out.
+    - |
+      ---
+      - You'll
+      - have
+      - to
+      - back
+      - up
+      - your
+      - car
+      - so
+      - that
+      - I
+      - can
+      - get
+      - out.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:45.439554'
+    - '2016-10-26 23:57:45.439554'
+    - 3
+    - 'null'
+    - 
+  - - 157
+    - My wife backed me up over my decision to quit my job.
+    - |
+      ---
+      - My
+      - wife
+      - backed
+      - me
+      - up
+      - over
+      - my
+      - decision
+      - to
+      - quit
+      - my
+      - job.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:45.442367'
+    - '2016-10-26 23:57:45.442367'
+    - 3
+    - 'null'
+    - 
+  - - 158
+    - The racing car blew up after it crashed into the fence.
+    - |
+      ---
+      - The
+      - racing
+      - car
+      - blew
+      - up
+      - after
+      - it
+      - crashed
+      - into
+      - the
+      - fence.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:45.445485'
+    - '2016-10-26 23:57:45.445485'
+    - 3
+    - 'null'
+    - 
+  - - 159
+    - Our car broke down at the side of the highway in the snowstom.
+    - |
+      ---
+      - Our
+      - car
+      - broke
+      - down
+      - at
+      - the
+      - side
+      - of
+      - the
+      - highway
+      - in
+      - the
+      - snowstom.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:45.449045'
+    - '2016-10-26 23:57:45.449045'
+    - 3
+    - 'null'
+    - 
+  - - 160
+    - Somebody broke in last night and stole our stereo.
+    - |
+      ---
+      - Somebody
+      - broke
+      - in
+      - last
+      - night
+      - and
+      - stole
+      - our
+      - stereo.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:45.453122'
+    - '2016-10-26 23:57:45.453122'
+    - 3
+    - 'null'
+    - 
+  - - 161
+    - The fireman had to break into the room to rescue the children.
+    - |
+      ---
+      - The
+      - fireman
+      - had
+      - to
+      - break
+      - into
+      - the
+      - room
+      - to
+      - rescue
+      - the
+      - children.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:45.456586'
+    - '2016-10-26 23:57:45.456586'
+    - 3
+    - 'null'
+    - 
+  - - 162
+    - My boyfriend and I broke up before I moved to America.
+    - |
+      ---
+      - My
+      - boyfriend
+      - and
+      - I
+      - broke
+      - up
+      - before
+      - I
+      - moved
+      - to
+      - America.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:45.467633'
+    - '2016-10-26 23:57:45.467633'
+    - 3
+    - 'null'
+    - 
+  - - 163
+    - The prisoners broke up of jail when the guards weren't looking.
+    - |
+      ---
+      - The
+      - prisoners
+      - broke
+      - up
+      - of
+      - jail
+      - when
+      - the
+      - guards
+      - weren't
+      - looking.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:45.469919'
+    - '2016-10-26 23:57:45.469919'
+    - 3
+    - 'null'
+    - 
+  - - 164
+    - My grandparents brought me up after my parents died.
+    - |
+      ---
+      - My
+      - grandparents
+      - brought
+      - me
+      - up
+      - after
+      - my
+      - parents
+      - died.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:45.472164'
+    - '2016-10-26 23:57:45.472164'
+    - 3
+    - 'null'
+    - 
+  - - 165
+    - We called around but we weren't able to find the car part we needed.
+    - |
+      ---
+      - We
+      - called
+      - around
+      - but
+      - we
+      - weren't
+      - able
+      - to
+      - find
+      - the
+      - car
+      - part
+      - we
+      - needed.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:45.476336'
+    - '2016-10-26 23:57:45.476336'
+    - 3
+    - 'null'
+    - 
+  - - 166
+    - I called the company back but the offices were closed for the weekend.
+    - |
+      ---
+      - I
+      - called
+      - the
+      - company
+      - back
+      - but
+      - the
+      - offices
+      - were
+      - closed
+      - for
+      - the
+      - weekend.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:45.481231'
+    - '2016-10-26 23:57:45.481231'
+    - 3
+    - 'null'
+    - 
+  - - 167
+    - Jason called the wedding off because he wasn't in love with his fiance.
+    - |
+      ---
+      - Jason
+      - called
+      - the
+      - wedding
+      - 'off'
+      - because
+      - he
+      - wasn't
+      - in
+      - love
+      - with
+      - his
+      - fiance.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:45.484155'
+    - '2016-10-26 23:57:45.484155'
+    - 3
+    - 'null'
+    - 
+  - - 168
+    - The professor called on me for question 1.
+    - |
+      ---
+      - The
+      - professor
+      - called
+      - 'on'
+      - me
+      - for
+      - question
+      - '1.'
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:45.486642'
+    - '2016-10-26 23:57:45.486642'
+    - 3
+    - 'null'
+    - 
+  - - 169
+    - Brian asked Judy out to dinner and a movie.
+    - |
+      ---
+      - Brian
+      - asked
+      - Judy
+      - out
+      - to
+      - dinner
+      - and
+      - a
+      - movie.
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-26 23:57:45.489891'
+    - '2016-10-26 23:57:45.489891'
+    - 3
+    - 'null'
+    - 
+  - - 170
+    - I asked around but nobody has seen my wallet.
+    - |
+      ---
+      - I
+      - asked
+      - around
+      - but
+      - nobody
+      - has
+      - seen
+      - my
+      - wallet.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:45.494088'
+    - '2016-10-26 23:57:45.494088'
+    - 3
+    - 'null'
+    - 
+  - - 171
+    - You'll have to back up your car so that I can get out.
+    - |
+      ---
+      - You'll
+      - have
+      - to
+      - back
+      - up
+      - your
+      - car
+      - so
+      - that
+      - I
+      - can
+      - get
+      - out.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:45.498025'
+    - '2016-10-26 23:57:45.498025'
+    - 3
+    - 'null'
+    - 
+  - - 172
+    - My wife backed me up over my decision to quit my job.
+    - |
+      ---
+      - My
+      - wife
+      - backed
+      - me
+      - up
+      - over
+      - my
+      - decision
+      - to
+      - quit
+      - my
+      - job.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:45.501642'
+    - '2016-10-26 23:57:45.501642'
+    - 3
+    - 'null'
+    - 
+  - - 173
+    - The racing car blew up after it crashed into the fence.
+    - |
+      ---
+      - The
+      - racing
+      - car
+      - blew
+      - up
+      - after
+      - it
+      - crashed
+      - into
+      - the
+      - fence.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:45.504516'
+    - '2016-10-26 23:57:45.504516'
+    - 3
+    - 'null'
+    - 
+  - - 174
+    - Our car broke down at the side of the highway in the snowstom.
+    - |
+      ---
+      - Our
+      - car
+      - broke
+      - down
+      - at
+      - the
+      - side
+      - of
+      - the
+      - highway
+      - in
+      - the
+      - snowstom.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:45.506103'
+    - '2016-10-26 23:57:45.506103'
+    - 3
+    - 'null'
+    - 
+  - - 175
+    - Somebody broke in last night and stole our stereo.
+    - |
+      ---
+      - Somebody
+      - broke
+      - in
+      - last
+      - night
+      - and
+      - stole
+      - our
+      - stereo.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:45.507674'
+    - '2016-10-26 23:57:45.507674'
+    - 3
+    - 'null'
+    - 
+  - - 176
+    - The fireman had to break into the room to rescue the children.
+    - |
+      ---
+      - The
+      - fireman
+      - had
+      - to
+      - break
+      - into
+      - the
+      - room
+      - to
+      - rescue
+      - the
+      - children.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:45.509271'
+    - '2016-10-26 23:57:45.509271'
+    - 3
+    - 'null'
+    - 
+  - - 177
+    - My boyfriend and I broke up before I moved to America.
+    - |
+      ---
+      - My
+      - boyfriend
+      - and
+      - I
+      - broke
+      - up
+      - before
+      - I
+      - moved
+      - to
+      - America.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:45.511806'
+    - '2016-10-26 23:57:45.511806'
+    - 3
+    - 'null'
+    - 
+  - - 178
+    - The prisoners broke up of jail when the guards weren't looking.
+    - |
+      ---
+      - The
+      - prisoners
+      - broke
+      - up
+      - of
+      - jail
+      - when
+      - the
+      - guards
+      - weren't
+      - looking.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:45.514733'
+    - '2016-10-26 23:57:45.514733'
+    - 3
+    - 'null'
+    - 
+  - - 179
+    - My grandparents brought me up after my parents died.
+    - |
+      ---
+      - My
+      - grandparents
+      - brought
+      - me
+      - up
+      - after
+      - my
+      - parents
+      - died.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:45.517868'
+    - '2016-10-26 23:57:45.517868'
+    - 3
+    - 'null'
+    - 
+  - - 180
+    - We called around but we weren't able to find the car part we needed.
+    - |
+      ---
+      - We
+      - called
+      - around
+      - but
+      - we
+      - weren't
+      - able
+      - to
+      - find
+      - the
+      - car
+      - part
+      - we
+      - needed.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:45.519908'
+    - '2016-10-26 23:57:45.519908'
+    - 3
+    - 'null'
+    - 
+  - - 181
+    - I called the company back but the offices were closed for the weekend.
+    - |
+      ---
+      - I
+      - called
+      - the
+      - company
+      - back
+      - but
+      - the
+      - offices
+      - were
+      - closed
+      - for
+      - the
+      - weekend.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:45.522891'
+    - '2016-10-26 23:57:45.522891'
+    - 3
+    - 'null'
+    - 
+  - - 182
+    - Jason called the wedding off because he wasn't in love with his fiance.
+    - |
+      ---
+      - Jason
+      - called
+      - the
+      - wedding
+      - 'off'
+      - because
+      - he
+      - wasn't
+      - in
+      - love
+      - with
+      - his
+      - fiance.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:45.525732'
+    - '2016-10-26 23:57:45.525732'
+    - 3
+    - 'null'
+    - 
+  - - 183
+    - The professor called on me for question 1.
+    - |
+      ---
+      - The
+      - professor
+      - called
+      - 'on'
+      - me
+      - for
+      - question
+      - '1.'
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:45.528490'
+    - '2016-10-26 23:57:45.528490'
+    - 3
+    - 'null'
+    - 
+  - - 184
+    - Brian asked Judy out to dinner and a movie.
+    - |
+      ---
+      - Brian
+      - asked
+      - Judy
+      - out
+      - to
+      - dinner
+      - and
+      - a
+      - movie.
+    - |
+      ---
+      - 1
+      - 3
+    - 
+    - '2016-10-26 23:57:45.530465'
+    - '2016-10-26 23:57:45.530465'
+    - 3
+    - 'null'
+    - 
+  - - 185
+    - I asked around but nobody has seen my wallet.
+    - |
+      ---
+      - I
+      - asked
+      - around
+      - but
+      - nobody
+      - has
+      - seen
+      - my
+      - wallet.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:45.533058'
+    - '2016-10-26 23:57:45.533058'
+    - 3
+    - 'null'
+    - 
+  - - 186
+    - You'll have to back up your car so that I can get out.
+    - |
+      ---
+      - You'll
+      - have
+      - to
+      - back
+      - up
+      - your
+      - car
+      - so
+      - that
+      - I
+      - can
+      - get
+      - out.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:45.535126'
+    - '2016-10-26 23:57:45.535126'
+    - 3
+    - 'null'
+    - 
+  - - 187
+    - My wife backed me up over my decision to quit my job.
+    - |
+      ---
+      - My
+      - wife
+      - backed
+      - me
+      - up
+      - over
+      - my
+      - decision
+      - to
+      - quit
+      - my
+      - job.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:45.537123'
+    - '2016-10-26 23:57:45.537123'
+    - 3
+    - 'null'
+    - 
+  - - 188
+    - The racing car blew up after it crashed into the fence.
+    - |
+      ---
+      - The
+      - racing
+      - car
+      - blew
+      - up
+      - after
+      - it
+      - crashed
+      - into
+      - the
+      - fence.
+    - |
+      ---
+      - 3
+      - 4
+    - 
+    - '2016-10-26 23:57:45.538490'
+    - '2016-10-26 23:57:45.538490'
+    - 3
+    - 'null'
+    - 
+  - - 189
+    - Our car broke down at the side of the highway in the snowstom.
+    - |
+      ---
+      - Our
+      - car
+      - broke
+      - down
+      - at
+      - the
+      - side
+      - of
+      - the
+      - highway
+      - in
+      - the
+      - snowstom.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:45.539994'
+    - '2016-10-26 23:57:45.539994'
+    - 3
+    - 'null'
+    - 
+  - - 190
+    - Somebody broke in last night and stole our stereo.
+    - |
+      ---
+      - Somebody
+      - broke
+      - in
+      - last
+      - night
+      - and
+      - stole
+      - our
+      - stereo.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:45.542457'
+    - '2016-10-26 23:57:45.542457'
+    - 3
+    - 'null'
+    - 
+  - - 191
+    - The fireman had to break into the room to rescue the children.
+    - |
+      ---
+      - The
+      - fireman
+      - had
+      - to
+      - break
+      - into
+      - the
+      - room
+      - to
+      - rescue
+      - the
+      - children.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:45.545224'
+    - '2016-10-26 23:57:45.545224'
+    - 3
+    - 'null'
+    - 
+  - - 192
+    - My boyfriend and I broke up before I moved to America.
+    - |
+      ---
+      - My
+      - boyfriend
+      - and
+      - I
+      - broke
+      - up
+      - before
+      - I
+      - moved
+      - to
+      - America.
+    - |
+      ---
+      - 4
+      - 5
+    - 
+    - '2016-10-26 23:57:45.548781'
+    - '2016-10-26 23:57:45.548781'
+    - 3
+    - 'null'
+    - 
+  - - 193
+    - The prisoners broke up of jail when the guards weren't looking.
+    - |
+      ---
+      - The
+      - prisoners
+      - broke
+      - up
+      - of
+      - jail
+      - when
+      - the
+      - guards
+      - weren't
+      - looking.
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:45.551261'
+    - '2016-10-26 23:57:45.551261'
+    - 3
+    - 'null'
+    - 
+  - - 194
+    - My grandparents brought me up after my parents died.
+    - |
+      ---
+      - My
+      - grandparents
+      - brought
+      - me
+      - up
+      - after
+      - my
+      - parents
+      - died.
+    - |
+      ---
+      - 2
+      - 4
+    - 
+    - '2016-10-26 23:57:45.552904'
+    - '2016-10-26 23:57:45.552904'
+    - 3
+    - 'null'
+    - 
+  - - 195
+    - We called around but we weren't able to find the car part we needed.
+    - |
+      ---
+      - We
+      - called
+      - around
+      - but
+      - we
+      - weren't
+      - able
+      - to
+      - find
+      - the
+      - car
+      - part
+      - we
+      - needed.
+    - |
+      ---
+      - 1
+      - 2
+    - 
+    - '2016-10-26 23:57:45.554395'
+    - '2016-10-26 23:57:45.554395'
+    - 3
+    - 'null'
+    - 
+  - - 196
+    - I called the company back but the offices were closed for the weekend.
+    - |
+      ---
+      - I
+      - called
+      - the
+      - company
+      - back
+      - but
+      - the
+      - offices
+      - were
+      - closed
+      - for
+      - the
+      - weekend.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:45.555820'
+    - '2016-10-26 23:57:45.555820'
+    - 3
+    - 'null'
+    - 
+  - - 197
+    - Jason called the wedding off because he wasn't in love with his fiance.
+    - |
+      ---
+      - Jason
+      - called
+      - the
+      - wedding
+      - 'off'
+      - because
+      - he
+      - wasn't
+      - in
+      - love
+      - with
+      - his
+      - fiance.
+    - |
+      ---
+      - 1
+      - 4
+    - 
+    - '2016-10-26 23:57:45.557269'
+    - '2016-10-26 23:57:45.557269'
+    - 3
+    - 'null'
+    - 
+  - - 198
+    - The professor called on me for question 1.
+    - |
+      ---
+      - The
+      - professor
+      - called
+      - 'on'
+      - me
+      - for
+      - question
+      - '1.'
+    - |
+      ---
+      - 2
+      - 3
+    - 
+    - '2016-10-26 23:57:45.559439'
+    - '2016-10-26 23:57:45.559439'
+    - 3
+    - 'null'
+    - 

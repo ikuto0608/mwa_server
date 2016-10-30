@@ -12,10 +12,25 @@
 
 class UsersController < ApplicationController
   def login
-    @user = User.new(user_params)
+    @user = User.where(email: user_params[:email]).first
+    if @user.nil?
+      respond_to do |format|
+        format.json { render :json => { :success => false } }
+      end
+
+      return
+    end
+
+    if !(@user.password == user_params[:password])
+      respond_to do |format|
+        format.json { render :json => { :success => false } }
+      end
+
+      return
+    end
 
     respond_to do |format|
-      format.json { render :json => {:success => true, :auth_token => 'hoge'} }
+      format.json { render :json => { :success => true, :auth_token => @user.auth_token } }
     end
   end
 
