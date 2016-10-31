@@ -92,6 +92,16 @@ class ExamsController < ApplicationController
       topics << {question: topic.question, description: topic.description, questionArray: topic.question_array, indexArrayOfAnswer: topic.index_array_of_answer, userId: topic.user_id, examId: topic.exam_id, volatileJson: topic.volatile_json }
     end
 
+    record = Record.new(exam_id: @exam.id, user_id: @current_user.id)
+    record.record_time = @exam.result_time
+    record.topic_ids = @exam.marked_topics.map(&:id)
+    record.wrong_answer_topic_ids = @exam.marked_topics.map do |topic|
+      topic.id unless topic.volatile_json[:correct]
+    end
+    record.wrong_answer_topic_ids.compact!
+    record.score = record.topic_ids.count - record.wrong_answer_topic_ids.count
+    record.save
+
     respond_to do |format|
       format.json do
         render json: { id: @exam.id, name: @exam.name, markedTopics: topics }.to_json
