@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post 'exams/result' => 'exams#result'
   post 'exams/:id/update' => 'exams#update'
 
-  post 'login' => 'users#login'
+  get 'users/show' => 'users#show'
 
   post 'auth_user' => 'authentication#authenticate_user'
   get 'home' => 'home#index'

@@ -11,26 +11,13 @@
 #
 
 class UsersController < ApplicationController
-  def login
-    @user = User.where(email: user_params[:email]).first
-    if @user.nil?
+  before_filter :authenticate_request!, :only => :show
+
+  def show
+    unless @current_user.nil?
       respond_to do |format|
-        format.json { render :json => { :success => false } }
+        format.json { render :json => { name: @current_user.name, email: @current_user.email } }
       end
-
-      return
-    end
-
-    if !(@user.password == user_params[:password])
-      respond_to do |format|
-        format.json { render :json => { :success => false } }
-      end
-
-      return
-    end
-
-    respond_to do |format|
-      format.json { render :json => { :success => true, :auth_token => @user.auth_token } }
     end
   end
 

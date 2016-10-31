@@ -14,7 +14,7 @@
 #
 
 class ExamsController < ApplicationController
-  #before_action :authenticate
+  before_filter :authenticate_request!
 
   def index
     @exams = Exam.all()
@@ -102,20 +102,5 @@ class ExamsController < ApplicationController
   private
     def exam_params
       params.require(:exam).permit(:id, :name, :result_time, topics_attributes: [ :question, :description, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
-    end
-
-    def authenticate
-      authenticate_token || render_unauthorized
-    end
-
-    def authenticate_token
-      authenticate_with_http_token do |token, options|
-        @user = User.find_by(auth_token: token)
-      end
-    end
-
-    def render_unauthorized
-      self.headers['WWW-Authenticate'] = 'Token realm="Application"'
-      render json: 'Bad credentials', status: 401
     end
 end
