@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+
   resources :exams
   get 'exams/take/:id' => 'exams#take'
   post 'exams/result' => 'exams#result'
