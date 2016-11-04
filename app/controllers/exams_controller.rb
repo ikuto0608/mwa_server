@@ -18,13 +18,10 @@ class ExamsController < ApplicationController
 
   def index
     @exams = Exam.all()
-    @exams.each do |exam|
-      exam.topics
-    end
 
     respond_to do |format|
       format.json do
-        render json: @exams.to_json
+        render json: @exams.to_json(:include => [:tags])
       end
     end
   end
@@ -52,7 +49,9 @@ class ExamsController < ApplicationController
 
   def update
     @exam = Exam.where(id: params[:id]).first
-    if @exam.update_attributes(exam_params)
+    @exam.assign_attributes(exam_params)
+    @exam.inject_exsited_tags
+    if @exam.save()
       respond_to do |format|
         format.json { render :json => {:message => "Success"} }
       end
