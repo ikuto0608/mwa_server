@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101205817) do
+ActiveRecord::Schema.define(version: 20161104172159) do
 
   create_table "exams", force: true do |t|
     t.string   "name"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 20161101205817) do
     t.integer  "result_time"
     t.text     "volatile_json"
   end
+
+  create_table "exams_tags", id: false, force: true do |t|
+    t.integer "exam_id"
+    t.integer "tag_id"
+  end
+
+  add_index "exams_tags", ["exam_id"], name: "index_exams_tags_on_exam_id"
+  add_index "exams_tags", ["tag_id"], name: "index_exams_tags_on_tag_id"
 
   create_table "records", force: true do |t|
     t.integer  "user_id"
@@ -37,6 +45,14 @@ ActiveRecord::Schema.define(version: 20161101205817) do
 
   add_index "records", ["exam_id"], name: "index_records_on_exam_id"
   add_index "records", ["user_id"], name: "index_records_on_user_id"
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
   create_table "topics", force: true do |t|
     t.string   "question"

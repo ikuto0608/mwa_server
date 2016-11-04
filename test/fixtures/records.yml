@@ -7,10 +7,10 @@
 #  exam_id                :integer
 #  score                  :integer
 #  record_time            :integer
-#  topic_ids              :string(255)
-#  wrong_answer_topic_ids :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  topic_ids              :text
+#  wrong_answer_topic_ids :text
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

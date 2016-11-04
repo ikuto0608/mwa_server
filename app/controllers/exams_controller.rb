@@ -35,13 +35,14 @@ class ExamsController < ApplicationController
 
     respond_to do |format|
       format.json do
-        render json: @exam.to_json(:include => :topics)
+        render json: @exam.to_json(:include => [:topics, :tags] )
       end
     end
   end
 
   def create
     @exam = Exam.new(exam_params)
+    @exam.inject_exsited_tags
     @exam.save()
 
     respond_to do |format|
@@ -111,6 +112,6 @@ class ExamsController < ApplicationController
 
   private
     def exam_params
-      params.require(:exam).permit(:id, :name, :result_time, topics_attributes: [ :question, :description, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
+      params.require(:exam).permit(:id, :name, :result_time, tags_attributes: [ :name ], topics_attributes: [ :question, :description, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
     end
 end

@@ -15,7 +15,9 @@
 
 class Exam < ActiveRecord::Base
   has_many :topics, dependent: :delete_all
+  has_and_belongs_to_many :tags
   accepts_nested_attributes_for :topics
+  accepts_nested_attributes_for :tags
   serialize :result_array
   serialize :volatile_json, JSON
 
@@ -34,5 +36,18 @@ class Exam < ActiveRecord::Base
       topic.volatile_json[:correct] = self.result_array[index][:answer].eql?(topic.answer_array)
       topic.volatile_json[:answer] = self.result_array[index][:answer] unless topic.volatile_json[:correct]
     end
+  end
+
+  def inject_exsited_tags
+    self.tags.load
+    new_tags = []
+    self.tags.each do |tag|
+      if existing = Tag.find_by_name(tag.name)
+        new_tags << existing
+      else
+        new_tags << tag
+      end
+    end
+    self.tags = new_tags
   end
 end
