@@ -2,16 +2,21 @@ Rails.application.routes.draw do
   #devise_for :users
   devise_for :users, controllers: { registrations: 'users/registrations' }
 
-  resources :exams
-  get 'exams/take/:id' => 'exams#take'
-  post 'exams/result' => 'exams#result'
-  post 'exams/:id/update' => 'exams#update'
+  resources :exams do
+    collection do
+      get 'search' => 'exams#search'
+      get 'take/:id' => 'exams#take'
+      post 'result' => 'exams#result'
+      post ':id/update' => 'exams#update'
+    end
+  end
 
   get 'users/show' => 'users#show'
 
   post 'auth_user' => 'authentication#authenticate_user'
   get 'home' => 'home#index'
 
+  get 'tags/search' => 'tags#search'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

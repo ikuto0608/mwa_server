@@ -37,6 +37,12 @@ class ExamsController < ApplicationController
     end
   end
 
+  def search
+    tags = params[:tag].split(',')
+    @exams = Exam.joins(:tags).where(:tags => {name: tags}).uniq.to_a
+    render json: @exams.to_json(:include => [:tags])
+  end
+
   def create
     @exam = Exam.new(exam_params)
     @exam.inject_exsited_tags
