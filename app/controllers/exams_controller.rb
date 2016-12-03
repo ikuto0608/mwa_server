@@ -15,32 +15,23 @@
 
 class ExamsController < ApplicationController
   before_filter :authenticate_request!
+  respond_to :json
 
   def index
     @exams = Exam.all()
-
-    respond_to do |format|
-      format.json do
-        render json: @exams.to_json(:include => [:tags])
-      end
-    end
+    render :json => @exams.to_json(:include => [:tags])
   end
 
   def show
     id = params[:id]
     @exam = Exam.where(id: id).first
-
-    respond_to do |format|
-      format.json do
-        render json: @exam.to_json(:include => [:topics, :tags] )
-      end
-    end
+    render :json => @exam.to_json(:include => [:topics, :tags] )
   end
 
   def search
     tags = params[:tag].split(',')
     @exams = Exam.joins(:tags).where(:tags => {name: tags}).uniq.to_a
-    render json: @exams.to_json(:include => [:tags])
+    render :json => @exams.to_json(:include => [:tags])
   end
 
   def create
@@ -82,11 +73,7 @@ class ExamsController < ApplicationController
       answer_array_list << topic.answer_array
     end
 
-    respond_to do |format|
-      format.json do
-        render json: { id: @exam.id, name: @exam.name, questions: question_array }.to_json
-      end
-    end
+    render json: { id: @exam.id, name: @exam.name, questions: question_array }.to_json
   end
 
   def result
@@ -108,11 +95,7 @@ class ExamsController < ApplicationController
     record.score = record.topic_ids.count - record.wrong_answer_topic_ids.count
     record.save
 
-    respond_to do |format|
-      format.json do
-        render json: { id: @exam.id, name: @exam.name, markedTopics: topics }.to_json
-      end
-    end
+    render json: { id: @exam.id, name: @exam.name, markedTopics: topics }.to_json
   end
 
   private
