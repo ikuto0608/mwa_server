@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :exams do
     collection do
       get 'search' => 'exams#search'
+      get 'search_by_tag' => 'exams#searchByTag'
       get 'take/:id' => 'exams#take'
       post 'result' => 'exams#result'
       post ':id/update' => 'exams#update'

@@ -34,6 +34,12 @@ class ExamsController < ApplicationController
     render :json => @exams.to_json(:include => [:tags])
   end
 
+  def searchByTag
+    term = params[:term]
+    @exams = Exam.joins(:tags).where("tags.name LIKE ?" , "%#{term}%").to_a
+    render json: @exams.to_json(:include => [:tags])
+  end
+
   def create
     @exam = Exam.new(exam_params)
     @exam.inject_exsited_tags
