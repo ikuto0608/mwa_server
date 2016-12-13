@@ -19,12 +19,32 @@
 #
 
 class UsersController < ApplicationController
-  before_filter :authenticate_request!, :only => :show
+  before_filter :authenticate_request!, :only => [:show, :latest_history]
 
   def show
-    unless @current_user.nil?
-      render json: @current_user.to_json(:include => :records)
-    end
+    return if @current_user.nil?
+
+    exam_ids = @current_user.records.map(&:exam_id).uniq
+    exams = Exam.where(id: exam_ids).to_a
+    render json: { user: @current_user, exams: exams }.to_json
+  end
+
+  def latest_history
+    return if @current_user.nil?
+
+    records = Record.where(user_id: @current_user.id, exam_id: params[:exam_id])
+                    .order(created_at: :desc)
+                    .to_a
+
+    latest_records = records[0..9]
+    average_score = records.sum(&:score) / records.count.to_f
+    average_record_time = records.sum(&:record_time) / records.count.to_f
+
+    render json: {
+                  latestRecords: latest_records,
+                  averageScore: average_score.round(1),
+                  averageRecordTime: average_record_time.round(0),
+                 }.to_json
   end
 
   private

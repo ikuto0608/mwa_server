@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   get 'users/show' => 'users#show'
+  get 'users/latest_history/:exam_id' => 'users#latest_history'
 
   post 'auth_user' => 'authentication#authenticate_user'
   get 'home' => 'home#index'

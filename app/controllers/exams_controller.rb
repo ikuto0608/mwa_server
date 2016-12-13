@@ -75,7 +75,12 @@ class ExamsController < ApplicationController
 
     topics.sample(10).each do |topic|
       answer_array_list.delete(topic.answer_array)
-      question_array << { id: topic.id, answers: [topic.answer_array].concat(answer_array_list.sample(3)).shuffle, sentence: topic.make_question, description: topic.description }
+      question_array << {
+                          id: topic.id,
+                          answers: [topic.answer_array].concat(answer_array_list.sample(3)).shuffle,
+                          sentence: topic.make_question,
+                          description: topic.description
+                        }
       answer_array_list << topic.answer_array
     end
 
@@ -88,7 +93,15 @@ class ExamsController < ApplicationController
 
     topics = []
     @exam.marked_topics.each do |topic|
-      topics << {question: topic.question, description: topic.description, questionArray: topic.question_array, indexArrayOfAnswer: topic.index_array_of_answer, userId: topic.user_id, examId: topic.exam_id, volatileJson: topic.volatile_json }
+      topics << {
+                  question: topic.question,
+                  description: topic.description,
+                  questionArray: topic.question_array,
+                  indexArrayOfAnswer: topic.index_array_of_answer,
+                  userId: topic.user_id,
+                  examId: topic.exam_id,
+                  volatileJson: topic.volatile_json
+                }
     end
 
     record = Record.new(exam_id: @exam.id, user_id: @current_user.id)
