@@ -36,7 +36,7 @@ class ExamsController < ApplicationController
 
   def searchByTag
     term = params[:term]
-    @exams = Exam.joins(:tags).where("tags.name LIKE ?" , "%#{term}%").to_a
+    @exams = Exam.joins(:tags).where("tags.name LIKE ?" , "%#{term}%").uniq.to_a
     render json: @exams.to_json(:include => [:tags])
   end
 
@@ -101,7 +101,7 @@ class ExamsController < ApplicationController
     record.score = record.topic_ids.count - record.wrong_answer_topic_ids.count
     record.save
 
-    render json: { id: @exam.id, name: @exam.name, markedTopics: topics }.to_json
+    render json: { id: @exam.id, name: @exam.name, resultTime: @exam.result_time, markedTopics: topics }.to_json
   end
 
   private

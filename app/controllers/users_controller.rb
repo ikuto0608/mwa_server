@@ -23,11 +23,7 @@ class UsersController < ApplicationController
 
   def show
     unless @current_user.nil?
-      respond_to do |format|
-        format.json do
-          render json: @current_user.to_json(:include => :records)
-        end
-      end
+      render json: @current_user.to_json(:include => :records)
     end
   end
 
