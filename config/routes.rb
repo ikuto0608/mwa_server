@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get 'search' => 'exams#search'
       get 'search_by_tag' => 'exams#searchByTag'
       get 'take/:id' => 'exams#take'
+      get 'find' => 'exams#find_by_user'
       post 'result' => 'exams#result'
       post ':id/update' => 'exams#update'
     end

@@ -25,7 +25,23 @@ class ExamsController < ApplicationController
   def show
     id = params[:id]
     @exam = Exam.where(id: id).first
-    render :json => @exam.to_json(:include => [:topics, :tags] )
+
+    render json: {
+                  id: @exam.id,
+                  name: @exam.name,
+                  description: @exam.description,
+                  userId: @exam.user_id,
+                  numberOfAnswer: @exam.number_of_answer,
+                  topics: @exam.topics,
+                  tags: @exam.tags,
+                }.to_json
+  end
+
+  def find_by_user
+    return if @current_user.nil?
+
+    @exams = Exam.where(user_id: @current_user.id).to_a
+    render :json => @exams.to_json(:include => [:tags])
   end
 
   def search
@@ -41,31 +57,36 @@ class ExamsController < ApplicationController
   end
 
   def create
+    return if @current_user.nil?
+
     @exam = Exam.new(exam_params)
     @exam.inject_exsited_tags
-    @exam.save()
+    @exam.user_id = @current_user.id
 
-    respond_to do |format|
-      format.json { render :json => {:message => "Success"} }
+    if @exam.save()
+      render :json => { :message => "Success" }
+    else
+      render :json => { :message => "Error" }
     end
   end
 
   def update
+    return if @current_user.nil?
+
     @exam = Exam.where(id: params[:id]).first
     @exam.assign_attributes(exam_params)
     @exam.inject_exsited_tags
+
     if @exam.save()
-      respond_to do |format|
-        format.json { render :json => {:message => "Success"} }
-      end
+      render :json => { :message => "Success" }
     else
-      respond_to do |format|
-        format.json { render :json => {:message => "Error"} }
-      end
+      render :json => { :message => "Error" }
     end
   end
 
   def take
+    return if @current_user.nil?
+
     id = params[:id]
     @exam = Exam.where(id: id).first
 
@@ -88,6 +109,8 @@ class ExamsController < ApplicationController
   end
 
   def result
+    return if @current_user.nil?
+    
     @exam = Exam.new(exam_params)
     @exam.mark
 
@@ -119,6 +142,6 @@ class ExamsController < ApplicationController
 
   private
     def exam_params
-      params.require(:exam).permit(:id, :name, :result_time, tags_attributes: [ :name ], topics_attributes: [ :question, :description, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
+      params.require(:exam).permit(:id, :name, :number_of_answer, :description, :result_time, tags_attributes: [ :name ], topics_attributes: [ :question, :description, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
     end
 end

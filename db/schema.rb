@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104172159) do
+ActiveRecord::Schema.define(version: 20161214184933) do
 
   create_table "exams", force: true do |t|
     t.string   "name"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20161104172159) do
     t.text     "result_array"
     t.integer  "result_time"
     t.text     "volatile_json"
+    t.integer  "number_of_answer"
+    t.text     "description"
   end
 
   create_table "exams_tags", id: false, force: true do |t|
