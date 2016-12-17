@@ -112,7 +112,7 @@ class ExamsController < ApplicationController
 
   def result
     return if @current_user.nil?
-    
+
     @exam = Exam.new(exam_params)
     @exam.mark
 
@@ -138,6 +138,9 @@ class ExamsController < ApplicationController
     record.wrong_answer_topic_ids.compact!
     record.score = record.topic_ids.count - record.wrong_answer_topic_ids.count
     record.save
+
+    @current_user.update_record(record)
+    @current_user.save
 
     render json: { id: @exam.id, name: @exam.name, resultTime: @exam.result_time, markedTopics: topics }.to_json
   end

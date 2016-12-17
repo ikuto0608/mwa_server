@@ -16,6 +16,7 @@
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :string(255)
 #  last_sign_in_ip        :string(255)
+#  property_json          :text             default("{}")
 #
 
 class User < ActiveRecord::Base
@@ -25,5 +26,42 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :records, dependent: :delete_all
-  
+  serialize :property_json, JSON
+
+  def update_record(record)
+    self.property_json['records'] ||= {}
+    record_evaluated = self.property_json['records']["#{record.exam_id}"]
+
+    if record_evaluated
+      if record.score == 10
+        record_evaluated['number_of_current_perfect_in_a_row'] =
+          record_evaluated['number_of_current_perfect_in_a_row'] + 1
+
+        record_evaluated['number_of_perfect_in_a_row'] =
+          [ record_evaluated['number_of_perfect_in_a_row'],
+            record_evaluated['number_of_current_perfect_in_a_row']
+          ].max
+
+        record_evaluated['average_perfect_record_time'] =
+          ( record_evaluated['average_perfect_record_time'] + record.record_time ) / 2
+      else
+        record_evaluated['number_of_perfect_in_a_row'] =
+          [ record_evaluated['number_of_perfect_in_a_row'],
+            record_evaluated['number_of_current_perfect_in_a_row']
+          ].max
+
+        record_evaluated['number_of_current_perfect_in_a_row'] = 0
+      end
+    else
+      return unless record.score == 10
+
+      record_evaluated = {
+        'number_of_perfect_in_a_row' => 1,
+        'number_of_current_perfect_in_a_row' => 1,
+        'average_perfect_record_time' => record.record_time,
+      }
+    end
+
+    self.property_json['records']["#{record.exam_id}"] = record_evaluated
+  end
 end
