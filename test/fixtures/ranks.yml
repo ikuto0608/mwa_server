@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: ranks
+#
+#  id                                 :integer          not null, primary key
+#  user_id                            :integer
+#  exam_id                            :integer
+#  number_of_perfect_in_a_row         :integer
+#  number_of_current_perfect_in_a_row :integer
+#  average_perfect_record_time        :float
+#  created_at                         :datetime
+#  updated_at                         :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  exam_id: 1
+  number_of_perfect_in_a_row: 1
+  number_of_current_perfect_in_a_row: 1
+  average_perfect_record_time: 1.5
+
+two:
+  user_id: 1
+  exam_id: 1
+  number_of_perfect_in_a_row: 1
+  number_of_current_perfect_in_a_row: 1
+  average_perfect_record_time: 1.5

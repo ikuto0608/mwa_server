@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   get 'home' => 'home#index'
 
   get 'tags/search' => 'tags#search'
+
+  get 'ranks/find_by_exam/:exam_id' => 'ranks#find_by_exam'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

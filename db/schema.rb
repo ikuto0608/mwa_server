@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161216181500) do
+ActiveRecord::Schema.define(version: 20161220234152) do
 
   create_table "exams", force: true do |t|
     t.string   "name"
@@ -33,6 +33,20 @@ ActiveRecord::Schema.define(version: 20161216181500) do
 
   add_index "exams_tags", ["exam_id"], name: "index_exams_tags_on_exam_id"
   add_index "exams_tags", ["tag_id"], name: "index_exams_tags_on_tag_id"
+
+  create_table "ranks", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "exam_id"
+    t.integer  "number_of_perfect_in_a_row"
+    t.integer  "number_of_current_perfect_in_a_row"
+    t.float    "average_perfect_record_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "user_name"
+  end
+
+  add_index "ranks", ["exam_id"], name: "index_ranks_on_exam_id"
+  add_index "ranks", ["user_id"], name: "index_ranks_on_user_id"
 
   create_table "records", force: true do |t|
     t.integer  "user_id"
