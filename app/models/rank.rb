@@ -10,6 +10,7 @@
 #  average_perfect_record_time        :float
 #  created_at                         :datetime
 #  updated_at                         :datetime
+#  user_name                          :string(255)
 #
 
 class Rank < ActiveRecord::Base
