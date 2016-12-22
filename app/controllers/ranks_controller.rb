@@ -20,7 +20,9 @@ class RanksController < ApplicationController
   def find_by_exam
     return if @current_user.nil?
 
-    @ranks = Rank.where(exam_id: params[:exam_id]).to_a
+    @ranks = Rank.where(exam_id: params[:exam_id])
+                 .order(number_of_perfect_in_a_row: :desc)
+                 .to_a
     render :json => @ranks.to_json
   end
 end

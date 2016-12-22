@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
           [rank.number_of_perfect_in_a_row, rank.number_of_current_perfect_in_a_row].max
 
         rank.average_perfect_record_time =
-          ( rank.average_perfect_record_time + record.record_time ) / 2
+          (( rank.average_perfect_record_time + record.record_time ) / 2).to_i
       else
         rank.number_of_current_perfect_in_a_row = 0
       end

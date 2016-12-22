@@ -48,3 +48,7 @@ gem 'devise'
 gem 'jwt'
 
 gem 'yaml_db'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
