@@ -122,7 +122,7 @@ class ExamsController < ApplicationController
                   question: topic.question,
                   description: topic.description,
                   questionArray: topic.question_array,
-                  indexArrayOfAnswer: topic.index_array_of_answer,
+                  indexOfAnswerArray: topic.index_array_of_answer,
                   userId: topic.user_id,
                   examId: topic.exam_id,
                   volatileJson: topic.volatile_json
