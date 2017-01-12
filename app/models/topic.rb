@@ -15,6 +15,7 @@
 #
 
 class Topic < ActiveRecord::Base
+  validates_presence_of :question, :question_array, :index_array_of_answer, :user_id, :exam_id
   belongs_to :exam
   serialize :question_array
   serialize :index_array_of_answer

@@ -14,6 +14,7 @@
 #
 
 class Record < ActiveRecord::Base
+  validates_presence_of :user_id, :exam_id, :score, :record_time, :topic_ids, :wrong_answer_topic_ids
   belongs_to :user
   belongs_to :exam
 

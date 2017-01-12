@@ -16,6 +16,7 @@
 #
 
 class Exam < ActiveRecord::Base
+  validates_presence_of :name, :user_id, :number_of_answer
   has_many :topics, dependent: :delete_all
   has_and_belongs_to_many :tags
   accepts_nested_attributes_for :topics

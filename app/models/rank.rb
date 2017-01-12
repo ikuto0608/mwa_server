@@ -14,4 +14,5 @@
 #
 
 class Rank < ActiveRecord::Base
+  validates_presence_of :user_id, :exam_id, :user_name
 end
