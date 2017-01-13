@@ -31,22 +31,22 @@ ActiveRecord::Schema.define(version: 20161220234152) do
     t.integer "tag_id"
   end
 
-  add_index "exams_tags", ["exam_id"], name: "index_exams_tags_on_exam_id"
-  add_index "exams_tags", ["tag_id"], name: "index_exams_tags_on_tag_id"
+  add_index "exams_tags", ["exam_id"], name: "index_exams_tags_on_exam_id", using: :btree
+  add_index "exams_tags", ["tag_id"], name: "index_exams_tags_on_tag_id", using: :btree
 
   create_table "ranks", force: true do |t|
     t.integer  "user_id"
     t.integer  "exam_id"
     t.integer  "number_of_perfect_in_a_row"
     t.integer  "number_of_current_perfect_in_a_row"
-    t.float    "average_perfect_record_time"
+    t.float    "average_perfect_record_time",        limit: 24
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "user_name"
   end
 
-  add_index "ranks", ["exam_id"], name: "index_ranks_on_exam_id"
-  add_index "ranks", ["user_id"], name: "index_ranks_on_user_id"
+  add_index "ranks", ["exam_id"], name: "index_ranks_on_exam_id", using: :btree
+  add_index "ranks", ["user_id"], name: "index_ranks_on_user_id", using: :btree
 
   create_table "records", force: true do |t|
     t.integer  "user_id"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 20161220234152) do
     t.text     "wrong_answer_topic_ids"
   end
 
-  add_index "records", ["exam_id"], name: "index_records_on_exam_id"
-  add_index "records", ["user_id"], name: "index_records_on_user_id"
+  add_index "records", ["exam_id"], name: "index_records_on_exam_id", using: :btree
+  add_index "records", ["user_id"], name: "index_records_on_user_id", using: :btree
 
   create_table "tags", force: true do |t|
     t.string   "name"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20161220234152) do
     t.datetime "updated_at"
   end
 
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "topics", force: true do |t|
     t.string   "question"
@@ -82,26 +82,25 @@ ActiveRecord::Schema.define(version: 20161220234152) do
     t.text     "description"
   end
 
-  add_index "topics", ["exam_id"], name: "index_topics_on_exam_id"
+  add_index "topics", ["exam_id"], name: "index_topics_on_exam_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",                  default: "",   null: false
-    t.string   "encrypted_password",     default: "",   null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,    null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.text     "property_json",          default: "{}"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
