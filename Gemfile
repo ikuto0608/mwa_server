@@ -49,6 +49,9 @@ gem 'jwt'
 
 gem 'yaml_db'
 
+#app server
+gem 'unicorn', '~> 4.9.0'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4'
