@@ -27,7 +27,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :records, dependent: :delete_all
-  serialize :property_json, JSON
 
   def update_record(record)
     rank = Rank.where(user_id: self.id, exam_id: record.exam_id).first
