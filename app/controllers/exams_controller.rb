@@ -64,8 +64,9 @@ class ExamsController < ApplicationController
     @exam = Exam.new(exam_params)
     @exam.inject_exsited_tags
     @exam.user_id = @current_user.id
+    @exam.topics.map {|t| t.user_id = @current_user.id }
 
-    if @exam.save()
+    if @exam.save
       render :json => { :message => "Success" }
     else
       render :json => { :message => "Error" }
@@ -78,8 +79,9 @@ class ExamsController < ApplicationController
     @exam = Exam.where(id: params[:id]).first
     @exam.assign_attributes(exam_params)
     @exam.inject_exsited_tags
+    @exam.topics.map {|t| t.user_id = @current_user.id }
 
-    if @exam.save()
+    if @exam.save
       render :json => { :message => "Success" }
     else
       render :json => { :message => "Error" }
@@ -147,6 +149,17 @@ class ExamsController < ApplicationController
 
   private
     def exam_params
-      params.require(:exam).permit(:id, :name, :number_of_answer, :description, :result_time, tags_attributes: [ :name ], topics_attributes: [ :question, :description, question_array: [], index_array_of_answer: [] ], result_array: [:topic_id, answer: []])
+      params.require(:exam)
+            .permit(:id,
+                    :name,
+                    :number_of_answer,
+                    :description,
+                    :user_id,
+                    :result_array,
+                    :result_time,
+                    tags_attributes: [ :name ],
+                    topics_attributes: [ :question, :description, question_array: [], index_array_of_answer: [] ],
+                    result_array: [:topic_id, answer: []]
+                    )
     end
 end
