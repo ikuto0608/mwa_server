@@ -158,7 +158,7 @@ class ExamsController < ApplicationController
                     :result_array,
                     :result_time,
                     tags_attributes: [ :name ],
-                    topics_attributes: [ :question, :description, question_array: [], index_array_of_answer: [] ],
+                    topics_attributes: [ :id, :question, :description, question_array: [], index_array_of_answer: [] ],
                     result_array: [:topic_id, answer: []]
                     )
     end
