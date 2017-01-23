@@ -136,7 +136,7 @@ class ExamsController < ApplicationController
     record.topic_ids = @exam.marked_topics.map(&:id)
     record.wrong_answer_topic_ids = @exam.marked_topics.map do |topic|
       topic.id unless topic.volatile_json[:correct]
-    end
+    end || []
     record.wrong_answer_topic_ids.compact!
     record.score = record.topic_ids.count - record.wrong_answer_topic_ids.count
     record.save
