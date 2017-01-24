@@ -81,6 +81,15 @@ class ExamsController < ApplicationController
     @exam.inject_exsited_tags
     @exam.topics.map {|t| t.user_id = @current_user.id }
 
+    exsisted_ids = exam_params[:topics_attributes].map{|t| t[:id] }
+    @exam.topics.each do |t|
+      next if t.id.nil?
+
+      if !exsisted_ids.include?(t.id)
+        t.mark_for_destruction
+      end
+    end
+
     if @exam.save
       render :json => { :message => "Success" }
     else
