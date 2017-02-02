@@ -25,8 +25,14 @@ class ExamsController < ApplicationController
   end
 
   def show
+    return if @current_user.nil?
+    
     id = params[:id]
     @exam = Exam.where(id: id).first
+
+    if @current_user.id != @exam.user_id
+      render :json => { :message => "Error" }
+    end
 
     render json: {
                   id: @exam.id,
