@@ -1,5 +1,4 @@
-== README
-
+# Momerise
 This is a backend of memorizing app.
 
 * Ruby version
